@@ -2,34 +2,41 @@
 # 🚧 [WORK IN PROGRESS] 🚧
 A personal project instructed by General Academy to showcase my EDA work <br>
 
-Tool: PostgreSQL, Microsoft Excel <br>
-Programming Language: SQL <br>
-Dataset: [Kaggle open dataset](https://www.kaggle.com/datasets/mojtaba142/hotel-booking) <br>
+**Tool**: pgAdmin, Microsoft Excel, Tableau <br>
+**Programming Language**: PostgreSQL <br>
+<!--Dataset: [Kaggle open dataset](https://www.kaggle.com/datasets/mojtaba142/hotel-booking)--> <br>
 
 **Table of Contents**
-- Stage 0: Problem Statement
+- Problem Statement
     - Introduction
     - Business Question
     - Objectives
-- Stage 1: Data Preprocessing
+- Data Preparation and Cleaning
     - Data Overview
     - Data Assessment
-- Stage 2: Data Analysis
-- Stage 3: Summary and Recommendation
+- Data Analysis
+- Summary and Recommendation
 
 <br>
 <br>
 
 ----
 
-## 📂 Stage 0: Problem Statement
+## 1️⃣ Problem Statement
 
 ### Introduction
 Analyzing business performance is a vital component of achieving success for companies. Through careful analysis, businesses can uncover their issues, vulnerabilities, and strengths. In the context of the hospitality industry, comprehending customer behavior becomes particularly crucial. This understanding allows companies to pinpoint the factors that sway customers when they're booking hotels. Moreover, it enables companies to recognize which products or services are underperforming in the market. These insights serve as a foundation for tailoring effective business strategies, ultimately enhancing the customer experience and paving the way for long-term business success.
 
 ### Business Question
+1. What types of hotels do customers visit most often?
+2. Does length of stay affect hotel booking cancellation rates?
+3. Does the time lag between a hotel reservation and the day the guest arrives affect the cancellation rate of hotel reservations?
 
 ### Objectives
+This mini-project was done to:
+1. Enhance my ability to extract, clean and summarize data.
+2. Create informative visualization from queries in PostgreSQL.
+3. Give some suggestions to improve the hotel business.
 
 <br>
 <br>
@@ -37,7 +44,13 @@ Analyzing business performance is a vital component of achieving success for com
 
 ----
 
-## 📂 Stage 1: Data Preprocessing
+## 2️⃣ Data Preparation and Cleaning
+
+### Data Overview
+
+
+
+### Data Assessment
 
 <br>
 <br>
@@ -45,7 +58,7 @@ Analyzing business performance is a vital component of achieving success for com
 
 ----
 
-## 📂 Stage 2: Data Analysis
+## 3️⃣ Data Analysis
 
 <br>
 <br>
@@ -53,4 +66,4 @@ Analyzing business performance is a vital component of achieving success for com
 
 ----
 
-## 📂 Stage 3: Summary and Recommendation
+## 4️⃣ Summary and Recommendation
