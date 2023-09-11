@@ -2,9 +2,14 @@
 # 🚧 [WORK IN PROGRESS] 🚧
 A personal project instructed by General Academy to showcase my EDA work <br>
 
-**Tools**: Microsoft Excel, PgAdmin, Tableau <br>
-**Programming Language**: PostgreSQL <br>
-<!--Dataset: [Kaggle open dataset](https://www.kaggle.com/datasets/mojtaba142/hotel-booking)--> <br>
+Software: <br>
+[![](https://img.shields.io/badge/MS_Excel-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white)](#) 
+[![](https://img.shields.io/badge/PgAdmin-34567C?style=for-the-badge&logo=adminer&logoColor=white)](#)
+[![](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white)](#) <br>
+Programming Language:  <br>
+[![](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)](#) <!-- &emsp; -->
+
+<br>
 
 **Table of Contents**
 - Problem Statement
