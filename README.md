@@ -14,15 +14,15 @@ A personal project instructed by General Academy to showcase my EDA work <br>
 <br>
 
 **Table of Contents**
-- [Problem Statement](##1️⃣-Problem-Statement)
+- [Problem Statement](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#1%EF%B8%8F%E2%83%A3-problem-statement)
     - Introduction
     - Business Question
     - Objectives
-- [Data Preparation and Cleaning](##2️⃣-Data-Preparation-and-Cleaning)
+- [Data Preparation and Cleaning](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#1%EF%B8%8F%E2%83%A3-problem-statement)
     - Data Overview
     - Data Assessment
-- [Data Analysis](##3️⃣-Data-Analysis)
-- [Summary and Recommendation](##4️⃣-Summary-and-Recommendation)
+- [Data Analysis](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#1%EF%B8%8F%E2%83%A3-problem-statement)
+- [Summary and Recommendation](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#1%EF%B8%8F%E2%83%A3-problem-statement)
 
 <br>
 <br>
