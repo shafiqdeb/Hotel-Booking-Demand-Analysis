@@ -2,29 +2,31 @@
 # 🚧 [WORK IN PROGRESS] 🚧
 A personal project instructed by General Academy to showcase my EDA work <br>
 
-Software: <br>
-[![](https://img.shields.io/badge/MS_Excel-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white)](#) 
-[![](https://img.shields.io/badge/PgAdmin-34567C?style=for-the-badge&logo=adminer&logoColor=white)](#)
-[![](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white)](#) <br>
-Programming Language:  <br>
-[![](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)](#) <!-- &emsp; -->
+💻 Software: <br>
+[![Microsoft Excel](https://img.shields.io/badge/MS_Excel-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white)](https://www.microsoft.com/en-my/microsoft-365/excel) 
+[![pgAdmin](https://img.shields.io/badge/PgAdmin-34567C?style=for-the-badge&logo=adminer&logoColor=white)](https://www.pgadmin.org/)
+[![Tableau](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white)](https://www.tableau.com/) <br>
+🅰️ Programming Language:  <br>
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/) <br> <!-- &emsp; -->
+📑 Datasets: <br>
+[![Kaggle](https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/datasets/mojtaba142/hotel-booking)
 
 <br>
 
 **Table of Contents**
-- Problem Statement
+- [Problem Statement](##-1️⃣-Problem-Statement)
     - Introduction
     - Business Question
     - Objectives
-- Data Preparation and Cleaning
+- [Data Preparation and Cleaning](##-2️⃣-Data-Preparation-and-Cleaning)
     - Data Overview
     - Data Assessment
-- Data Analysis
-- Summary and Recommendation
+- [Data Analysis](##-3️⃣-Data-Analysis)
+- [Summary and Recommendation](##-4️⃣-Summary-and-Recommendation)
 
 <br>
 <br>
-
+ 
 ----
 
 ## 1️⃣ Problem Statement
@@ -132,6 +134,7 @@ Anomalous data or data that is not needed | - There are negative values ​​an
 
 ## 3️⃣ Data Analysis
 
+test
 
 <br>
 <br>
@@ -140,3 +143,30 @@ Anomalous data or data that is not needed | - There are negative values ​​an
 ----
 
 ## 4️⃣ Summary and Recommendation
+
+<!--
+
+In summary, City Hotels are the preferred choice for most customers, and there's a noticeable surge in bookings during holiday seasons, particularly from May to July and October to December. Based on these observations, here are some business recommendations:
+
+1. **Enhance Resort Hotels**: Given the lower booking rates for Resort Hotels, companies can focus on optimizing their facilities and services to attract more customers. Consider adding amenities like spas, gyms, or swimming pools to improve the overall guest experience. Providing personalized and friendly customer service can also make a significant difference.
+
+2. **Leverage City Hotels**: Capitalize on the high demand for City Hotels, which are more profitable due to their popularity. Companies can explore additional services tailored for business customers, such as offering meeting hall spaces or packages for events like seminars.
+
+3. **Boost Promotions During Peak Seasons**: During holiday seasons, consider implementing promotional strategies to attract more guests. Special discounts for guests booking multiple rooms or enticing holiday packages can be effective. To minimize booking cancellations, think about introducing non-refundable booking options.
+
+4. **Flexible Pricing for Off-Peak Times**: During low season periods, companies can adopt a combination of flexible and non-refundable rates to attract guests. Offering special but non-refundable discounts can help maintain bookings even during less busy times.
+
+<br>
+
+The cancellation rate increases as the length of stay in both types of hotels incereases. City Hotels' cancellation rate increased significantly with the lowest percentage for a duration of less than one week. Resort hotels also tend to experience an increase in cancellation rates, but they are more stagnant and for stays of less than 2 weeks and more than 1 month the cancellation rate tends to be lower. Based on the insights about cancellation rates and the length of stay at both types of hotels, here are some business recommendations:
+
+1. **Establish Clear Cancellation Policies**: It's essential for companies to have well-defined cancellation policies in place to protect against revenue loss. These policies should be communicated clearly to customers both during online and offline booking processes. They should encompass details about refunds, cancellation fees, and other terms and conditions. Implementing stricter cancellation policies can help deter fraudulent bookings and minimize revenue impact.
+
+2. **Optimize Pricing Strategies**: Consider implementing a pricing strategy that includes limiting the number of overnight stays. For flexible rates, you can set a one-week window for maximum stays, reducing the risk of unwanted cancellations. Additionally, offer non-refundable rates for longer stays to increase revenue and discourage last-minute cancellations.
+
+3. **Enhance Pre-Stay Services**: To prevent cancellations, focus on improving customer satisfaction by providing excellent pre-stay services. Engage with customers before their arrival, addressing their questions or concerns promptly. Personalized and attentive service can build loyalty and reduce the likelihood of guests canceling their reservations.
+
+<br>
+By implementing these recommendations, both City and Resort Hotels can effectively manage lead times and reduce cancellation rates, ultimately improving revenue and guest satisfaction.
+
+-->
