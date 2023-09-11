@@ -14,15 +14,15 @@ A personal project instructed by General Academy to showcase my EDA work <br>
 <br>
 
 **Table of Contents**
-- [Problem Statement](##-1️⃣-Problem-Statement)
+- [Problem Statement](##1️⃣-Problem-Statement)
     - Introduction
     - Business Question
     - Objectives
-- [Data Preparation and Cleaning](##-2️⃣-Data-Preparation-and-Cleaning)
+- [Data Preparation and Cleaning](##2️⃣-Data-Preparation-and-Cleaning)
     - Data Overview
     - Data Assessment
-- [Data Analysis](##-3️⃣-Data-Analysis)
-- [Summary and Recommendation](##-4️⃣-Summary-and-Recommendation)
+- [Data Analysis](##3️⃣-Data-Analysis)
+- [Summary and Recommendation](##4️⃣-Summary-and-Recommendation)
 
 <br>
 <br>
