@@ -54,7 +54,10 @@ This mini-project was done to:
 ## 2️⃣ Data Preparation and Cleaning
 
 ### Data Overview
-For this **EDA** (Exploratory Data Analysis) project, I will be utilizing the "Hotel booking demand" dataset. The original source of this data is the [article](https://www.sciencedirect.com/science/article/pii/S2352340918315191) titled "Hotel Booking Demand Datasets," authored by *Nuno Antonio*, *Ana Almeida*, and *Luis Nunes*, and published in [Data in Brief](https://www.sciencedirect.com/journal/data-in-brief), Volume 22, in February 2019. The dataset was downloaded and subjected to cleaning procedures by *Thomas Mock* and *Antoine Bichat* during the [#TidyTuesday](https://github.com/rfordatascience/tidytuesday/tree/master/data/2020/2020-02-11) initiative in the week of February 11th, 2020.
+For this **EDA** (Exploratory Data Analysis) project, I will be utilizing the "Hotel booking demand" dataset. The original source of this data is the [article](https://www.sciencedirect.com/science/article/pii/S2352340918315191) titled "Hotel Booking Demand Datasets," authored by *Nuno Antonio*, *Ana Almeida*, and *Luis Nunes*, and published in [Data in Brief](https://www.sciencedirect.com/journal/data-in-brief), Volume 22, in February 2019. The dataset was downloaded and subjected to cleaning procedures by *Thomas Mock* and *Antoine Bichat* during the [#TidyTuesday](https://github.com/rfordatascience/tidytuesday/tree/master/data/2020/2020-02-11) initiative in the week of February 11th, 2020.<br>
+
+![GitHub](https://img.shields.io/github/license/rfordatascience/tidytuesday)
+
 
 The dataset consists of `29` columns and `119390` rows and held three years worth of transactions ranging from October 2014 until September 2017. It also includes booking details for both city hotel and resort hotel. It includes hotel reservation information such as the booking date, length of stay, the number of adults, children, and babies, as well as the availability of parking spaces, among other attributes.
 
@@ -134,7 +137,7 @@ Anomalous data or data that is not needed | - There are negative values ​​an
 
 ## 3️⃣ Data Analysis
 
-test
+testing
 
 <br>
 <br>
