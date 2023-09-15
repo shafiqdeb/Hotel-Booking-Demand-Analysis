@@ -2,7 +2,7 @@
 
 # 🏨 Hotel Booking Demand Analysis
 A personal project instructed by General Academy to showcase my EDA work. <br>
-Click [🔗here](https://public.tableau.com/app/profile/pideb/viz/HotelBookingDemands_16947519881480/STORYBOARD) to access the Tableau Storyboard used in the presentation.
+Click [🔗here](https://public.tableau.com/app/profile/pideb/viz/HotelBookingDemands_16947519881480/STORYBOARD) to access the interactive Tableau Storyboard used in the presentation.
 
 💻 Software: <br>
 [![Microsoft Excel](https://img.shields.io/badge/MS_Excel-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white)](https://www.microsoft.com/en-my/microsoft-365/excel) 
@@ -18,13 +18,18 @@ Click [🔗here](https://public.tableau.com/app/profile/pideb/viz/HotelBookingDe
 **Table of Contents**
 - [Introduction](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#1%EF%B8%8F%E2%83%A3-introduction)
     - [Objectives](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#objectives)
-- [Problem Statement](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#1%EF%B8%8F%E2%83%A3-problem-statement)
-    - [Business Questions](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#business-question)
-- [Data Preparation and Cleaning](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#2%EF%B8%8F%E2%83%A3-data-preparation-and-cleaning)
+- [Problem Statement](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#2%EF%B8%8F%E2%83%A3-problem-statement)
+    - [Business Questions](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#business-questions)
+- [Data Preparation and Cleaning](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#3%EF%B8%8F%E2%83%A3-data-preparation-and-cleaning)
     - [Data Overview](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#data-overview)
+    - [Data Dictionary](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#data-dictionary)
     - [Data Handling](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#data-handling)
-- [Data Analysis](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#3%EF%B8%8F%E2%83%A3-data-analysis)
-- [Summary and Recommendation](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#4%EF%B8%8F%E2%83%A3-summary-and-recommendation)
+- [Data Analysis](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#4%EF%B8%8F%E2%83%A3-data-analysis)
+    - [Analysis 1](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#1-introduction-on-city-hotel-and-resort-hotel)
+    - [Analysis 2](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#2-insights-on-countries-with-the-most-booking-orders)
+    - [Analysis 3](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#3-comparison-on-total-bookings-and-room-rate-per-months)
+    - [Analysis 4](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#4-correlation-on-week-of-stay-against-the-cancellation-rate)
+- [Summary and Recommendation](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#5%EF%B8%8F%E2%83%A3-summary-and-recommendation)
 - [References](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#references)
 
 <br><br>
@@ -216,7 +221,7 @@ These findings highlight the need for improvements in the hotel industry, especi
 
 ![slide9](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis/blob/main/slides/Slide9.PNG)
 
-In summary, City Hotels are the preferred choice for most customers, and there's a noticeable surge in bookings during holiday seasons, particularly from May to July and October to December. Based on these observations, here are some business recommendations:
+In summary, City Hotels are the preferred choice for most customers, and there's a noticeable surge in bookings during holiday seasons, particularly from June to September. Based on these observations, here are some business recommendations:
 
 1. **Enhance Resort Hotels**: Given the lower booking rates for Resort Hotels, companies can focus on optimizing their facilities and services to attract more customers. Consider adding amenities like spas, gyms, or swimming pools to improve the overall guest experience. Providing personalized and friendly customer service can also make a significant difference.
 
@@ -228,7 +233,7 @@ In summary, City Hotels are the preferred choice for most customers, and there's
 
 The cancellation rate increases as the length of stay in both types of hotels incereases. City Hotels' cancellation rate increased significantly with the lowest percentage for a duration of less than one week. Resort hotels also tend to experience an increase in cancellation rates, but they are more stagnant and for stays of less than 2 weeks and more than 1 month the cancellation rate tends to be lower. Based on the insights about cancellation rates and the length of stay at both types of hotels, here are some business recommendations:
 
-1. **Establish Clear Cancellation Policies**: It's essential for companies to have well-defined cancellation policies in place to protect against revenue loss. These policies should be communicated clearly to customers both during online and offline booking processes. They should encompass details about refunds, cancellation fees, and other terms and conditions. Implementing stricter cancellation policies can help deter fraudulent bookings and minimize revenue impact.
+1. **Establish Clear Cancellation Policies**: It is essential for companies to have well-defined cancellation policies in place to protect against revenue loss. These policies should be communicated clearly to customers both during online and offline booking processes. They should encompass details about refunds, cancellation fees, and other terms and conditions. Implementing stricter cancellation policies can help deter fraudulent bookings and minimize revenue impact.
 
 2. **Optimize Pricing Strategies**: Consider implementing a pricing strategy that includes limiting the number of overnight stays. For flexible rates, you can set a one-week window for maximum stays, reducing the risk of unwanted cancellations. Additionally, offer non-refundable rates for longer stays to increase revenue and discourage last-minute cancellations.
 
