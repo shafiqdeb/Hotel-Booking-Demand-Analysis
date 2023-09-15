@@ -24,10 +24,11 @@ Click [🔗here](https://public.tableau.com/app/profile/pideb/viz/HotelBookingDe
     - [Data Handling](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#data-handling)
 - [Data Analysis](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#3%EF%B8%8F%E2%83%A3-data-analysis)
 - [Summary and Recommendation](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#4%EF%B8%8F%E2%83%A3-summary-and-recommendation)
+- References
 
 <br><br>
  
-----
+---
 
 ## 1️⃣ Introduction
 
@@ -53,7 +54,7 @@ Both City and Resort Hotels are experiencing downturn in their booking numbers a
 
 <br><br>
 
-----
+---
 
 ## 3️⃣ Data Preparation and Cleaning
 
@@ -129,21 +130,26 @@ Data handling summary:
 
 | Data Assessment | Finding | Handling |
 | --------------- | ------- | -------- |
-| Null values or missing cells | There are null values ​​on `company`, `city`, `children`, and `agent` columns | - `company`: is filled with `0`, indicates the guest is not from any company <br> - `agent`: filled with `0`, indicates the guest made an independent reservation or not through an agent <br> - `children`: filled with `0`, indicates the guest is not bringing children to the hotel<br> - `city`: filled with `Undefined`, because the city is not known or uncertain |
-Inappropriate or inconsistent values | 	The meaning of 'Undefined' in the `meal` column | Values in `meal` column ​​can be categorized into 2, namely: <br> - `With Meal` (for values with BB, HB, FB) <br> - `No Meal` (for values with SC and Undefined)
-Anomalous data or data that is not needed | - There are negative values ​​and outliers that are very far from the data distribution in the column `adr` <br> - There are 180 booking data that do not have guests | **Delete** or **drop** the data row
+| Null values or missing cells  | There are null values ​​on `company`, `city`, `children`, and `agent` columns | - `company`: filled with `0`, indicates the guest is not from any company <br> - `agent`: filled with `0`, indicates the guest made an independent reservation or not through an agent <br> - `children`: filled with `0`, indicates the guest is not bringing children to the hotel |
+Inappropriate or inconsistent values | The meaning of 'Undefined' in the `meal` column | Changed 'Undefined' to `SC` that refers to Self-Catering, means customer did not request for foods |
+Outliers or unusual values | There are negative values ​​and outliers that are very far from the data distribution in the column `adr`| **Deleted** the data row as it would skew the distribution|
+| Unnecessary data | `name`, `email`, `phone_number` and `credit_card` columns are said to be artificially created and added into the dataset | **Dropped** the columns as it is irrelevant to be used in the analysis |
 
 <br><br>
 
-----
+---
 
 ## 4️⃣ Data Analysis
 
-testing
+The purpose of this analysis is to gain insights into booking trends specific to each hotel type. By conducting this analysis, companies can gain a deeper understanding of market dynamics and customer preferences. This knowledge, in turn, can be leveraged to enhance operational efficiency and maximize revenue optimization strategies.
+
+### 1. Introduction on City Hotel and Resort Hotel
+
+According to beaches.com, the main difference between resorts and city hotels is in the amenities. City hotels cater to travellers who need a place to spend the night at a certain destination, while Resort hotels tend to be destinations in themselves. Resorts often have a more spacious layout, offering their guests everything they need in one place[^1].
 
 <br><br>
 
-----
+---
 
 ## 5️⃣ Summary and Recommendation
 
@@ -171,3 +177,7 @@ The cancellation rate increases as the length of stay in both types of hotels in
 By implementing these recommendations, both City and Resort Hotels can effectively manage lead times and reduce cancellation rates, ultimately improving revenue and guest satisfaction.
 
 -->
+
+## References
+
+[^1]: Morrow, K. (2021, March 11), *"Resorts vs Hotels: The Differences And Best Option For Your Next Getaway"*. Beaches. https://www.beaches.com/blog/resorts-vs-hotels/
