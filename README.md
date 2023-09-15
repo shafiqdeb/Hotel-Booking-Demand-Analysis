@@ -21,14 +21,14 @@ Click [🔗here](https://public.tableau.com/app/profile/pideb/viz/HotelBookingDe
 - [Problem Statement](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#2%EF%B8%8F%E2%83%A3-problem-statement)
     - [Business Questions](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#business-questions)
 - [Data Preparation and Cleaning](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#3%EF%B8%8F%E2%83%A3-data-preparation-and-cleaning)
-    - [Data Overview](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#data-overview)
+    - [Data Extraction]
     - [Data Dictionary](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#data-dictionary)
     - [Data Handling](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#data-handling)
-- [Data Analysis](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#4%EF%B8%8F%E2%83%A3-data-analysis)
-    - [Analysis 1](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#1-introduction-on-city-hotel-and-resort-hotel)
-    - [Analysis 2](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#2-insights-on-countries-with-the-most-booking-orders)
-    - [Analysis 3](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#3-comparison-on-total-bookings-and-room-rate-per-months)
-    - [Analysis 4](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#4-correlation-on-week-of-stay-against-the-cancellation-rate)
+- [Data Analysis and Interpretation]
+    - [Analysis 1: Introduction on City Hotel and Resort Hotel](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#1-introduction-on-city-hotel-and-resort-hotel)
+    - [Analysis 2: Insights on countries with the most booking orders](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#2-insights-on-countries-with-the-most-booking-orders)
+    - [Analysis 3: Comparison on total bookings and room rate per months](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#3-comparison-on-total-bookings-and-room-rate-per-months)
+    - [Analysis 4: Correlation on week of stay against the cancellation rate](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#4-correlation-on-week-of-stay-against-the-cancellation-rate)
 - [Summary and Recommendation](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#5%EF%B8%8F%E2%83%A3-summary-and-recommendation)
 - [References](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#references)
 
@@ -68,7 +68,7 @@ Both City and Resort Hotels are experiencing downturn in their booking numbers a
 
 ## 3️⃣ Data Preparation and Cleaning
 
-### Data Overview
+### Data Extraction
 For this **EDA** (Exploratory Data Analysis) project, I will be utilizing the "Hotel booking demand" dataset. The original source of this data is the [article](https://www.sciencedirect.com/science/article/pii/S2352340918315191) titled "Hotel Booking Demand Datasets," authored by *Nuno Antonio*, *Ana Almeida*, and *Luis Nunes*, and published in [Data in Brief](https://www.sciencedirect.com/journal/data-in-brief), Volume 22, in February 2019. The dataset was downloaded and subjected to cleaning procedures by *Thomas Mock* and *Antoine Bichat* during the [#TidyTuesday](https://github.com/rfordatascience/tidytuesday/tree/master/data/2020/2020-02-11) initiative in the week of February 11th, 2020.<br>
 
 ![GitHub](https://img.shields.io/github/license/rfordatascience/tidytuesday)
@@ -249,9 +249,7 @@ By implementing these recommendations, both City and Resort Hotels can effective
 
 [^1]: Morrow, K. (2021, March 11). *"Resorts vs Hotels: The Differences And Best Option For Your Next Getaway"*. Beaches.
     https://www.beaches.com/blog/resorts-vs-hotels/
-
 [^2]: May, K. (2015, December 31). *"One in five hotel bookings on the web are cancelled"*. Phocuswire.
     https://www.phocuswire.com/One-in-five-hotel-bookings-on-the-web-are-cancelled
-
 [^3]: Verot, B. (2023, August 18). *"Everything you Need to Know About Hotel Cancellations"*. Hotelminder.
     https://www.hotelminder.com/everything-you-need-to-know-about-hotel-cancellations
