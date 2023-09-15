@@ -1,6 +1,7 @@
 # 🏨 Hotel Booking Demand Analysis
 # 🚧 [WORK IN PROGRESS] 🚧
-A personal project instructed by General Academy to showcase my EDA work <br>
+A personal project instructed by General Academy to showcase my EDA work. <br>
+Click [🔗here](https://public.tableau.com/app/profile/pideb/viz/HotelBookingDemands_16947519881480/STORYBOARD) to access the Tableau Storyboard used in the presentation.
 
 💻 Software: <br>
 [![Microsoft Excel](https://img.shields.io/badge/MS_Excel-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white)](https://www.microsoft.com/en-my/microsoft-365/excel) 
@@ -11,25 +12,20 @@ A personal project instructed by General Academy to showcase my EDA work <br>
 📑 Datasets: <br>
 [![Kaggle](https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/datasets/mojtaba142/hotel-booking)
 
-🧑‍🏫 Tableau Public: <br>
-[![Tableau](https://img.shields.io/badge/Tableau-3152A0?style=for-the-badge&logo=tableau&logoColor=white)](https://public.tableau.com/app/profile/pideb/viz/HotelBookingDemands_16947519881480/STORYBOARD)
-
-
 <br>
 
 **Table of Contents**
 - [Introduction](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#1%EF%B8%8F%E2%83%A3-introduction)
     - [Objectives](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#objectives)
 - [Problem Statement](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#1%EF%B8%8F%E2%83%A3-problem-statement)
-    - [Business Question](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#business-question)
+    - [Business Questions](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#business-question)
 - [Data Preparation and Cleaning](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#2%EF%B8%8F%E2%83%A3-data-preparation-and-cleaning)
     - [Data Overview](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#data-overview)
-    - Data Handling
+    - [Data Handling](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#data-handling)
 - [Data Analysis](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#3%EF%B8%8F%E2%83%A3-data-analysis)
 - [Summary and Recommendation](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#4%EF%B8%8F%E2%83%A3-summary-and-recommendation)
 
-<br>
-<br>
+<br><br>
  
 ----
 
@@ -37,33 +33,25 @@ A personal project instructed by General Academy to showcase my EDA work <br>
 
 Analyzing business performance is a vital component of achieving success for companies. Through careful analysis, businesses can uncover their issues, vulnerabilities, and strengths. In the context of the hospitality industry, comprehending customer behavior becomes particularly crucial. This understanding allows companies to pinpoint the factors that sway customers when they're booking hotels. Moreover, it enables companies to recognize which products or services are underperforming in the market. These insights serve as a foundation for tailoring effective business strategies, ultimately enhancing the customer experience and paving the way for long-term business success.
 
-
 ### Objectives
 This mini-project was done to:
-1. Enhance my ability to extract and clean data using Excel and SQL.
-2. Create informative visualization using Tableau Desktop and Tableau Public.
-3. Give some suggestions and recommendations to improve the hotel business.
+- [x] Enhance my ability to extract and clean data using Excel and SQL.
+- [x] Create informative visualization using Tableau Desktop and Tableau Public.
+- [x] Give some suggestions and recommendations to improve the hotel business.
 
-<br>
-<br>
+<br><br>
 
 ## 2️⃣ Problem Statement
 
-Both City and Resort hotels are experiencing downturn in their booking numbers as people would cancel their reservation after a period of time. The manager wanted to know what was the reasoning behind this and how do they overcome this situation. Come out with some recommendations that we can suggest to the hotels manager in order to improve their business.
+Both City and Resort Hotels are experiencing downturn in their booking numbers as people would cancel their reservation after a period of time. The manager wanted to know what was the reasoning behind this and how do they overcome this situation. Come out with some recommendations that we can suggest to the hotels manager in order to improve their business.
 
-### Business Question
-
-
+### Business Questions
 
 1. Where do the customers are coming from?
 2. What would affect the cancellation rate of hotel bookings? and
 3. How do hotel prices and duration of stays have impact on the customer satisfaction?
 
-
-
-<br>
-<br>
-<br>
+<br><br>
 
 ----
 
@@ -75,7 +63,7 @@ For this **EDA** (Exploratory Data Analysis) project, I will be utilizing the "H
 ![GitHub](https://img.shields.io/github/license/rfordatascience/tidytuesday)
 
 
-The dataset consists of `29` columns and `119390` rows and held three years worth of transactions ranging from October 2014 until September 2017. It also includes booking details for both city hotel and resort hotel. It includes hotel reservation information such as the booking date, length of stay, the number of adults, children, and babies, as well as the availability of parking spaces, among other attributes.
+The dataset consists of `29` columns and `119390` rows and held three years worth of transactions ranging from October 2014 until September 2017. It includes booking details for both City Hotel and Resort Hotel. The dataset also includes hotel reservation information such as the booking date, length of stay, the number of adults, children, and babies, as well as, the availability of parking spaces, among other attributes.
 
 > [!NOTE] 
 > All personally identifiable information has been carefully removed from the dataset to ensure privacy.
@@ -130,10 +118,10 @@ The dataset consists of `29` columns and `119390` rows and held three years wort
 ### Data Handling
 Data assessment is carried out to ensure that the data used for further analysis is ready and in accordance with the analysis needs. Things to do:
 
-- Checking for `null` values ​​or missing values ​​in the data
-- Checking data duplication
-- Performs data type and value consistency
-- Check for outliers or unusual data
+- Check for `null` ​​or missing values
+- Perform data type and value consistency
+- Check for any outliers or unusual values 
+- Drop any unnecessary columns that are not used in the analysis
 
 <br>
 
@@ -145,9 +133,7 @@ Data handling summary:
 Inappropriate or inconsistent values | 	The meaning of 'Undefined' in the `meal` column | Values in `meal` column ​​can be categorized into 2, namely: <br> - `With Meal` (for values with BB, HB, FB) <br> - `No Meal` (for values with SC and Undefined)
 Anomalous data or data that is not needed | - There are negative values ​​and outliers that are very far from the data distribution in the column `adr` <br> - There are 180 booking data that do not have guests | **Delete** or **drop** the data row
 
-<br>
-<br>
-<br>
+<br><br>
 
 ----
 
@@ -155,9 +141,7 @@ Anomalous data or data that is not needed | - There are negative values ​​an
 
 testing
 
-<br>
-<br>
-<br>
+<br><br>
 
 ----
 
@@ -169,11 +153,9 @@ In summary, City Hotels are the preferred choice for most customers, and there's
 
 1. **Enhance Resort Hotels**: Given the lower booking rates for Resort Hotels, companies can focus on optimizing their facilities and services to attract more customers. Consider adding amenities like spas, gyms, or swimming pools to improve the overall guest experience. Providing personalized and friendly customer service can also make a significant difference.
 
-2. **Leverage City Hotels**: Capitalize on the high demand for City Hotels, which are more profitable due to their popularity. Companies can explore additional services tailored for business customers, such as offering meeting hall spaces or packages for events like seminars.
+2. **Boost Promotions During Peak Seasons**: During holiday seasons, consider implementing promotional strategies to attract more guests. Special discounts for guests booking multiple rooms or enticing holiday packages can be effective. To minimize booking cancellations, think about introducing non-refundable booking options.
 
-3. **Boost Promotions During Peak Seasons**: During holiday seasons, consider implementing promotional strategies to attract more guests. Special discounts for guests booking multiple rooms or enticing holiday packages can be effective. To minimize booking cancellations, think about introducing non-refundable booking options.
-
-4. **Flexible Pricing for Off-Peak Times**: During low season periods, companies can adopt a combination of flexible and non-refundable rates to attract guests. Offering special but non-refundable discounts can help maintain bookings even during less busy times.
+3. **Flexible Pricing for Off-Peak Times**: During low season periods, companies can adopt a combination of flexible and non-refundable rates to attract guests. Offering special but non-refundable discounts can help maintain bookings even during less busy times.
 
 <br>
 
