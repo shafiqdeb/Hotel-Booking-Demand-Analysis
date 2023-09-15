@@ -1,4 +1,4 @@
-![slide1](/assets/slides/Slide1.png)
+![slide1](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis/blob/main/slides/Slide1.PNG)
 
 # 🏨 Hotel Booking Demand Analysis
 # 🚧 [WORK IN PROGRESS] 🚧
