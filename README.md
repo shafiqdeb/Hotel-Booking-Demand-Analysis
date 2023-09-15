@@ -52,7 +52,7 @@ This mini-project was done to:
 
 ## 2️⃣ Problem Statement
 
-Both City and Resort Hotels are experiencing downturn in their booking numbers as people would cancel their reservation after a period of time. The manager wanted to know what was the reasoning behind this and how do they overcome this situation. Come out with some recommendations that can be suggested to the hotels manager in order to improve their business.
+Both City and Resort Hotels are experiencing downturn in their booking numbers as people would cancel their reservation after a period of time. The manager wanted to know what was the reasoning behind this and how do they overcome this situation. Come out with some recommendations that can be suggested to the hotel manager in order to improve their business.
 
 ![slide2](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis/blob/main/slides/Slide2.PNG)
 
