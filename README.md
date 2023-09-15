@@ -247,11 +247,11 @@ By implementing these recommendations, both City and Resort Hotels can effective
 
 ## References
 
-[^1]: Morrow, K. (2021, March 11). *"Resorts vs Hotels: The Differences And Best Option For Your Next Getaway"*. Beaches.
+[^1]: Morrow, K. (2021, March 11). *"Resorts vs Hotels: The Differences And Best Option For Your Next Getaway"*. Beaches. <br>
     https://www.beaches.com/blog/resorts-vs-hotels/
 
-[^2]: May, K. (2015, December 31). *"One in five hotel bookings on the web are cancelled"*. Phocuswire.
-
+[^2]: May, K. (2015, December 31). *"One in five hotel bookings on the web are cancelled"*. Phocuswire. <br>
     https://www.phocuswire.com/One-in-five-hotel-bookings-on-the-web-are-cancelled
-[^3]: Verot, B. (2023, August 18). *"Everything you Need to Know About Hotel Cancellations"*. Hotelminder.
+
+[^3]: Verot, B. (2023, August 18). *"Everything you Need to Know About Hotel Cancellations"*. Hotelminder. <br>
     https://www.hotelminder.com/everything-you-need-to-know-about-hotel-cancellations
