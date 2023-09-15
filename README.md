@@ -147,6 +147,16 @@ The purpose of this analysis is to gain insights into booking trends specific to
 
 According to beaches.com, the main difference between resorts and city hotels is in the amenities. City hotels cater to travellers who need a place to spend the night at a certain destination, while Resort hotels tend to be destinations in themselves. Resorts often have a more spacious layout, offering their guests everything they need in one place[^1].
 
+[slide3]
+
+The first chart shows ratio of bookings in resort hotel compared to city hotel. City Hotel is clearly more popular with customers, with a booking percentage reaching 66% with 79,325 orders. Whereas, Resort Hotels are only booked by 33% of the time, from a total bookings of 119,393 orders.
+
+In regards of the booking cancelation, total number of customer checked-out from both hotels has a whopping amount of 75,164 while customers that declined the bookings represents a total of 44,219 times.
+
+[slide4]
+
+According to data, around 19% of hotel orders made online are canceled before the customer arrives[^2]. These cancellations can cause reduced room availability and impact hotel revenue because every empty room can be a financial burden on that day. Additionally, if a hotel uses an Online Travel Agency (OTA), this cancellation rate can impact the hotel's ranking in searches[^3].
+
 <br><br>
 
 ---
@@ -180,4 +190,8 @@ By implementing these recommendations, both City and Resort Hotels can effective
 
 ## References
 
-[^1]: Morrow, K. (2021, March 11), *"Resorts vs Hotels: The Differences And Best Option For Your Next Getaway"*. Beaches. https://www.beaches.com/blog/resorts-vs-hotels/
+[^1]: Morrow, K. (2021, March 11). *"Resorts vs Hotels: The Differences And Best Option For Your Next Getaway"*. Beaches. https://www.beaches.com/blog/resorts-vs-hotels/
+
+[^2]: May, K. (2015, December 31). *"One in five hotel bookings on the web are cancelled"*. Phocuswire. https://www.phocuswire.com/One-in-five-hotel-bookings-on-the-web-are-cancelled
+
+[^3]: Verot, B. (2023, August 18). *"Everything you Need to Know About Hotel Cancellations"*. Hotelminder. https://www.hotelminder.com/everything-you-need-to-know-about-hotel-cancellations
