@@ -18,13 +18,13 @@ A personal project instructed by General Academy to showcase my EDA work <br>
 <br>
 
 **Table of Contents**
-- Introduction
-    - Objectives
+- [Introduction](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#1%EF%B8%8F%E2%83%A3-introduction)
+    - [Objectives](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#objectives)
 - [Problem Statement](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#1%EF%B8%8F%E2%83%A3-problem-statement)
-    - Business Question
+    - [Business Question](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#business-question)
 - [Data Preparation and Cleaning](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#2%EF%B8%8F%E2%83%A3-data-preparation-and-cleaning)
-    - Data Overview
-    - Data Assessment
+    - [Data Overview](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#data-overview)
+    - Data Handling
 - [Data Analysis](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#3%EF%B8%8F%E2%83%A3-data-analysis)
 - [Summary and Recommendation](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#4%EF%B8%8F%E2%83%A3-summary-and-recommendation)
 
@@ -127,7 +127,7 @@ The dataset consists of `29` columns and `119390` rows and held three years wort
 
 <br> 
 
-### Data Assessment
+### Data Handling
 Data assessment is carried out to ensure that the data used for further analysis is ready and in accordance with the analysis needs. Things to do:
 
 - Checking for `null` values ​​or missing values ​​in the data
