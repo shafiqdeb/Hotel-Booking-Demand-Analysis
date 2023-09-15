@@ -21,10 +21,10 @@ Click [🔗here](https://public.tableau.com/app/profile/pideb/viz/HotelBookingDe
 - [Problem Statement](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#2%EF%B8%8F%E2%83%A3-problem-statement)
     - [Business Questions](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#business-questions)
 - [Data Preparation and Cleaning](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#3%EF%B8%8F%E2%83%A3-data-preparation-and-cleaning)
-    - [Data Extraction]
+    - [Data Extraction](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#data-extraction)
     - [Data Dictionary](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#data-dictionary)
     - [Data Handling](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#data-handling)
-- [Data Analysis and Interpretation]
+- [Data Analysis and Interpretation](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#4%EF%B8%8F%E2%83%A3-data-analysis-and-interpretation)
     - [Analysis 1: Introduction on City Hotel and Resort Hotel](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#1-introduction-on-city-hotel-and-resort-hotel)
     - [Analysis 2: Insights on countries with the most booking orders](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#2-insights-on-countries-with-the-most-booking-orders)
     - [Analysis 3: Comparison on total bookings and room rate per months](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#3-comparison-on-total-bookings-and-room-rate-per-months)
@@ -149,7 +149,7 @@ Outliers or unusual values | There are negative values ​​and outliers that a
 
 ---
 
-## 4️⃣ Data Analysis
+## 4️⃣ Data Analysis and Interpretation
 
 The purpose of this analysis is to gain insights into booking trends specific to each hotel type. By conducting this analysis, companies can gain a deeper understanding of market dynamics and customer preferences. This knowledge, in turn, can be leveraged to enhance operational efficiency and maximize revenue optimization strategies.
 
@@ -249,7 +249,9 @@ By implementing these recommendations, both City and Resort Hotels can effective
 
 [^1]: Morrow, K. (2021, March 11). *"Resorts vs Hotels: The Differences And Best Option For Your Next Getaway"*. Beaches.
     https://www.beaches.com/blog/resorts-vs-hotels/
+
 [^2]: May, K. (2015, December 31). *"One in five hotel bookings on the web are cancelled"*. Phocuswire.
+
     https://www.phocuswire.com/One-in-five-hotel-bookings-on-the-web-are-cancelled
 [^3]: Verot, B. (2023, August 18). *"Everything you Need to Know About Hotel Cancellations"*. Hotelminder.
     https://www.hotelminder.com/everything-you-need-to-know-about-hotel-cancellations
