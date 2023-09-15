@@ -7,17 +7,21 @@ A personal project instructed by General Academy to showcase my EDA work <br>
 [![pgAdmin](https://img.shields.io/badge/PgAdmin-34567C?style=for-the-badge&logo=adminer&logoColor=white)](https://www.pgadmin.org/)
 [![Tableau](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white)](https://www.tableau.com/) <br>
 🅰️ Programming Language:  <br>
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/) <br> <!-- &emsp; -->
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/) <br> <!-- &emsp;-->
 📑 Datasets: <br>
 [![Kaggle](https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/datasets/mojtaba142/hotel-booking)
+
+🧑‍🏫 Tableau Public: <br>
+[![Tableau](https://img.shields.io/badge/Tableau-3152A0?style=for-the-badge&logo=tableau&logoColor=white)](https://public.tableau.com/app/profile/pideb/viz/HotelBookingDemands_16947519881480/STORYBOARD)
+
 
 <br>
 
 **Table of Contents**
-- [Problem Statement](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#1%EF%B8%8F%E2%83%A3-problem-statement)
-    - Introduction
-    - Business Question
+- Introduction
     - Objectives
+- [Problem Statement](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#1%EF%B8%8F%E2%83%A3-problem-statement)
+    - Business Question
 - [Data Preparation and Cleaning](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis#2%EF%B8%8F%E2%83%A3-data-preparation-and-cleaning)
     - Data Overview
     - Data Assessment
@@ -29,21 +33,33 @@ A personal project instructed by General Academy to showcase my EDA work <br>
  
 ----
 
-## 1️⃣ Problem Statement
+## 1️⃣ Introduction
 
-### Introduction
 Analyzing business performance is a vital component of achieving success for companies. Through careful analysis, businesses can uncover their issues, vulnerabilities, and strengths. In the context of the hospitality industry, comprehending customer behavior becomes particularly crucial. This understanding allows companies to pinpoint the factors that sway customers when they're booking hotels. Moreover, it enables companies to recognize which products or services are underperforming in the market. These insights serve as a foundation for tailoring effective business strategies, ultimately enhancing the customer experience and paving the way for long-term business success.
 
-### Business Question
-1. What types of hotels do customers visit most often?
-2. Does length of stay affect hotel booking cancellation rates?
-3. Does the time lag between a hotel reservation and the day the guest arrives affect the cancellation rate of hotel reservations?
 
 ### Objectives
 This mini-project was done to:
-1. Enhance my ability to extract, clean and summarize data.
-2. Create informative visualization from queries in PostgreSQL.
-3. Give some suggestions to improve the hotel business.
+1. Enhance my ability to extract and clean data using Excel and SQL.
+2. Create informative visualization using Tableau Desktop and Tableau Public.
+3. Give some suggestions and recommendations to improve the hotel business.
+
+<br>
+<br>
+
+## 2️⃣ Problem Statement
+
+Both City and Resort hotels are experiencing downturn in their booking numbers as people would cancel their reservation after a period of time. The manager wanted to know what was the reasoning behind this and how do they overcome this situation. Come out with some recommendations that we can suggest to the hotels manager in order to improve their business.
+
+### Business Question
+
+
+
+1. Where do the customers are coming from?
+2. What would affect the cancellation rate of hotel bookings? and
+3. How do hotel prices and duration of stays have impact on the customer satisfaction?
+
+
 
 <br>
 <br>
@@ -51,7 +67,7 @@ This mini-project was done to:
 
 ----
 
-## 2️⃣ Data Preparation and Cleaning
+## 3️⃣ Data Preparation and Cleaning
 
 ### Data Overview
 For this **EDA** (Exploratory Data Analysis) project, I will be utilizing the "Hotel booking demand" dataset. The original source of this data is the [article](https://www.sciencedirect.com/science/article/pii/S2352340918315191) titled "Hotel Booking Demand Datasets," authored by *Nuno Antonio*, *Ana Almeida*, and *Luis Nunes*, and published in [Data in Brief](https://www.sciencedirect.com/journal/data-in-brief), Volume 22, in February 2019. The dataset was downloaded and subjected to cleaning procedures by *Thomas Mock* and *Antoine Bichat* during the [#TidyTuesday](https://github.com/rfordatascience/tidytuesday/tree/master/data/2020/2020-02-11) initiative in the week of February 11th, 2020.<br>
@@ -135,7 +151,7 @@ Anomalous data or data that is not needed | - There are negative values ​​an
 
 ----
 
-## 3️⃣ Data Analysis
+## 4️⃣ Data Analysis
 
 testing
 
@@ -145,7 +161,7 @@ testing
 
 ----
 
-## 4️⃣ Summary and Recommendation
+## 5️⃣ Summary and Recommendation
 
 <!--
 
