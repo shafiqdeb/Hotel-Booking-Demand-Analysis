@@ -166,11 +166,15 @@ According to beaches.com, the main difference between resorts and City Hotels is
 </summary>
 
 ```sql
-SELECT
-	'Total Bookings' AS title,
-	COUNT(hotel) AS total_bookings
+SELECT COUNT(hotel) AS total_bookings
 FROM hotels_cleaned;
 ```
+
+| total_bookings |
+| -------------: |
+|        119,383 |
+
+<br>
 </details>
 
 <details>
@@ -178,18 +182,19 @@ FROM hotels_cleaned;
 </summary>
 
 ```sql
-SELECT
-	'Stayed' AS status,
+SELECT 
+	is_canceled AS status,
 	COUNT(is_canceled) AS total_status
 FROM hotels_cleaned
-WHERE is_canceled = 'Stayed'
-UNION
-SELECT
-	'Canceled' AS status,
-	COUNT(is_canceled) AS total_status
-FROM hotels_cleaned
-WHERE is_canceled = 'Canceled';
+GROUP BY is_canceled;
 ```
+
+| status         | total_status   |
+| -------------- | -------------: |
+| Cenceled       |         44,219 |
+| Stayed	     |         75,164 |
+
+<br>
 </details>
 
 <details>
@@ -198,17 +203,17 @@ WHERE is_canceled = 'Canceled';
 
 ```sql
 SELECT
-	'City Hotel' AS hotel_type,
+	hotel,
 	COUNT(hotel) AS total_bookings
 FROM hotels_cleaned
-WHERE hotel = 'City Hotel'
-UNION
-SELECT
-	'Resort Hotel',
-	COUNT(hotel)
-FROM hotels_cleaned
-WHERE hotel = 'Resort Hotel';
+GROUP BY hotel;
 ```
+| hotel          | total_bookings |
+| -------------- | -------------: |
+| City Hotel     |         79,325 |
+| Resort Hotel   |         40,058 |
+
+<br>
 </details>
 
 <details>
@@ -217,21 +222,20 @@ WHERE hotel = 'Resort Hotel';
 
 ```sql
 SELECT
-	'City Hotel' AS hotel_type,
-	ROUND(COUNT(hotel) * 100.0
-		/ (SELECT COUNT(hotel)
+	hotel,
+	ROUND(COUNT(hotel) * 100.0 /
+		(SELECT COUNT(hotel)
 		FROM hotels_cleaned),2) AS percent_of_bookings
 FROM hotels_cleaned
-WHERE hotel = 'City Hotel'
-UNION
-SELECT
-	'Resort Hotel',
-	ROUND(COUNT(hotel) * 100.0
-		/ (SELECT COUNT(hotel)
-		FROM hotels_cleaned),2)
-FROM hotels_cleaned
-WHERE hotel = 'Resort Hotel';
+GROUP BY hotel;
 ```
+
+| hotel          | percent_of_bookings |
+| -------------- | ------------------: |
+| City Hotel     |        		 66.45 |
+| Resort Hotel   |        		 33.55 |
+
+<br>
 </details>
 
 
@@ -250,22 +254,21 @@ In regards to the booking cancellation, the total number of customers checked-ou
 </summary>
 
 ```sql
-SELECT
-	'Stayed' AS status,
-	ROUND(COUNT(hotel) * 100.0
-		/ (SELECT COUNT(is_canceled)
-		FROM hotels_cleaned),2) AS percent_of_status
+SELECT 
+	is_canceled AS status,
+	ROUND(COUNT(hotel) * 100.0 /
+		(SELECT COUNT(is_canceled)
+		FROM hotels_cleaned),2) AS percent_of_status	
 FROM hotels_cleaned
-WHERE is_canceled = 'Stayed'
-UNION
-SELECT
-	'Canceled' AS status,
-	ROUND(COUNT(hotel) * 100.0
-		/ (SELECT COUNT(is_canceled)
-		FROM hotels_cleaned),2) AS percent_of_status
-FROM hotels_cleaned
-WHERE is_canceled = 'Canceled';
+GROUP BY is_canceled;
 ```
+
+| status         | percent_of_status   |
+| -------------- | ------------------: |
+| Canceled       |        		 37.04 |
+| Stayed         |        		 62.96 |
+
+<br>
 </details>
 
 <details>
@@ -274,45 +277,37 @@ WHERE is_canceled = 'Canceled';
 
 ```sql
 SELECT
-	'City Hotel' AS hotel_type,
-	'Stayed' AS status,
-	ROUND(COUNT(hotel) * 100.0
-		/ (SELECT COUNT(hotel)
+	hotel,
+	is_canceled AS status,
+	ROUND(COUNT(hotel) * 100.0 /
+		(SELECT COUNT(hotel)
 			FROM hotels_cleaned
-			WHERE hotel = 'City Hotel'),2) AS percent_of_status
+			WHERE hotel = 'City Hotel'
+		),2) AS percentage
 FROM hotels_cleaned
-WHERE is_canceled = 'Stayed' AND hotel = 'City Hotel'
+WHERE hotel = 'City Hotel'
+GROUP BY hotel, status
 UNION
 SELECT
-	'City Hotel' AS hotel_type,
-	'Canceled' AS status,
-	ROUND(COUNT(hotel) * 100.0
-		/ (SELECT COUNT(hotel)
+	hotel,
+	is_canceled AS status,
+	ROUND(COUNT(hotel) * 100.0 /
+		(SELECT COUNT(hotel)
 			FROM hotels_cleaned
-			WHERE hotel = 'City Hotel'),2) AS percent_of_status
+			WHERE hotel = 'Resort Hotel'
+		),2) AS percentage
 FROM hotels_cleaned
-WHERE is_canceled = 'Canceled' AND hotel = 'City Hotel'
-UNION
-SELECT
-	'Resort Hotel' AS hotel_type,
-	'Stayed' AS status,
-	ROUND(COUNT(hotel) * 100.0
-		/ (SELECT COUNT(hotel)
-			FROM hotels_cleaned
-			WHERE hotel = 'Resort Hotel'),2) AS percent_of_status
-FROM hotels_cleaned
-WHERE is_canceled = 'Stayed' AND hotel = 'Resort Hotel'
-UNION
-SELECT
-	'Resort Hotel' AS hotel_type,
-	'Canceled' AS status,
-	ROUND(COUNT(hotel) * 100.0
-		/ (SELECT COUNT(hotel)
-			FROM hotels_cleaned
-			WHERE hotel = 'Resort Hotel'),2) AS percent_of_status
-FROM hotels_cleaned
-WHERE is_canceled = 'Canceled' AND hotel = 'Resort Hotel';
+WHERE hotel = 'Resort Hotel'
+GROUP BY hotel, status;
 ```
+
+| hotel 	   | status		| percentage |
+| ---		   | ---		| ---:		 |
+| City Hotel   | Canceled	| 41.72		 |
+| City Hotel   | Stayed		| 58.28		 |
+| Resort Hotel | Canceled	| 27.76		 |
+| Resort Hotel | Stayed		| 72.24		 |
+
 </details>
 <br>
 
@@ -341,6 +336,21 @@ GROUP BY country_name
 ORDER BY total_bookings DESC
 LIMIT 10;
 ```
+
+| country_name		| total_bookings
+| ---				| ---:
+| Portugal			| 48,584
+| United Kingdom	| 12,128
+| France			| 10,415
+| Spain				| 8,568
+| Germany			| 7,287
+| Italy				| 3,766
+| Ireland			| 3,375
+| Belgium			| 2,342
+| China				| 2,278
+| Brazil			| 2,224
+
+<br>
 </details>
 
 <details>
@@ -353,6 +363,16 @@ WHERE region NOT NULL
 GROUP BY region
 ORDER BY total_bookings DESC;
 ```
+
+| region			| total_bookings
+| ---				| ---:
+| Europe			| 108,148
+| Asia & Pacific	| 3,681
+| South America		| 2,885
+| North America		| 2,097
+| Middle East		| 1,417
+| Africa			| 667
+
 </details>
 <br>
 
@@ -392,6 +412,23 @@ FROM hotels_cleaned
 GROUP BY arrival_date_month
 ORDER BY months;
 ```
+
+| months | total_bookings
+| ---:	 | ---:
+|  1	 | 5,929
+|  2	 | 8,068
+|  3	 | 9,792
+|  4	 | 11,089
+|  5	 | 11,791
+|  6	 | 10,939
+|  7	 | 12,660
+|  8	 | 13,873
+|  9	 | 10,508
+| 10	 | 11,160
+| 11	 | 6,794
+| 12	 | 6,780
+
+<br>
 </details>
 
 <details>
@@ -402,7 +439,7 @@ WITH
 	AA AS
 	(
 		SELECT
-		arrival_date_month,
+			arrival_date_month,
 			COUNT(hotel) AS ch_bookings
 		FROM hotels_cleaned
 		WHERE hotel = 'City Hotel'
@@ -437,6 +474,23 @@ FROM AA
 JOIN BB ON AA.arrival_date_month = BB.arrival_date_month
 ORDER BY months;
 ```
+
+| months | ch_bookings | rh_bookings
+| ---:	 | ---:		   | --:
+|  1	 | 3,736	   | 2,193
+|  2	 | 4,965	   | 3,103
+|  3	 | 6,457	   | 3,335
+|  4	 | 7,480	   | 3,609
+|  5	 | 8,232	   | 3,559
+|  6	 | 7,894	   | 3,045
+|  7	 | 8,088	   | 4,572
+|  8	 | 8,979	   | 4,894
+|  9	 | 7,400	   | 3,108
+| 10	 | 7,605	   | 3,555
+| 11	 | 4,357	   | 2,437
+| 12	 | 4,132 	   | 2,648
+
+<br>
 </details>
 
 <details>
@@ -446,7 +500,8 @@ ORDER BY months;
 WITH
 	AA AS
 	(
-		SELECT arrival_date_month,
+		SELECT
+			arrival_date_month,
 			ROUND(AVG(adr),0) AS ch_adr
 		FROM hotels_cleaned
 		WHERE hotel = 'City Hotel'
@@ -454,7 +509,8 @@ WITH
 	),
 	BB AS
 	(
-		SELECT arrival_date_month,
+		SELECT
+			arrival_date_month,
 			ROUND(AVG(adr),0) AS rh_adr
 		FROM hotels_cleaned
 		WHERE hotel = 'Resort Hotel'
@@ -480,6 +536,21 @@ FROM AA
 JOIN BB ON AA.arrival_date_month = BB.arrival_date_month
 ORDER BY months;
 ```
+| months | ch_adr | rh_adr
+| ---:	 | ---:	  | --:
+|  1	 | 83	  | 49
+|  2	 | 85	  | 55
+|  3	 | 92	  | 58
+|  4	 | 111	  | 78
+|  5	 | 122	  | 79
+|  6	 | 119	  | 110
+|  7	 | 111	  | 155
+|  8	 | 115	  | 187
+|  9	 | 110	  | 93
+| 10	 | 100	  | 62
+| 11	 | 88	  | 48
+| 12	 | 89	  | 69
+
 </details>
 
 <br>
@@ -532,6 +603,22 @@ FROM AA
 JOIN BB ON AA.arrival_date_month = BB.arrival_date_month
 ORDER BY months;
 ```
+
+| months | avg_adr | total_canceled
+| ---:	 | ---:	   | --:
+|  1	 | 78.03   | 1,807
+|  2	 | 75.90   | 2,696
+|  3	 | 86.06   | 3,148
+|  4	 | 104.01  | 4,524
+|  5	 | 114.56  | 4,677
+|  6	 | 119.61  | 4,535
+|  7	 | 122.67  | 4,742
+|  8	 | 136.93  | 5,235
+|  9	 | 101.59  | 4,116
+| 10	 | 89.67   | 4,246
+| 11	 | 81.04   | 2,122
+| 12	 | 85.09   | 2,371
+
 </details>
 <br>
 
@@ -599,6 +686,16 @@ SELECT AA.week, ch_percent, rh_percent
 FROM AA
 JOIN BB ON AA.week = BB.week;
 ```
+
+| week | ch_percent | rh_percent
+| ---: | ---:       | ---:
+| 0	   | 3.34		| 0.98
+| 1	   | 17.94		| 4.29
+| 2	   | 28.55		| 5.08
+| 3	   | 15.15		| 4.09
+| 4	   | 9.87		| 10.71
+
+<br>
 </details>
 
 <details>
@@ -653,6 +750,15 @@ SELECT AA.week, ch_percent, rh_percent
 FROM AA
 JOIN BB ON AA.week = BB.week;
 ```
+
+| week | ch_percent | rh_percent
+| ---: | ---:       | ---:
+| 0	   | 36.76		| 7.34
+| 1	   | 19.35		| 5.54
+| 2	   | 17.78		| 10.45
+| 3	   | 0.34		| 0.66
+| 4	   | 0.63		| 1.15
+
 </details>
 <br>
 
