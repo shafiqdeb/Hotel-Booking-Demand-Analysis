@@ -1,3 +1,5 @@
+![slide1](/assets/slides/Slide1.png)
+
 # 🏨 Hotel Booking Demand Analysis
 # 🚧 [WORK IN PROGRESS] 🚧
 A personal project instructed by General Academy to showcase my EDA work. <br>
@@ -41,6 +43,8 @@ This mini-project was done to:
 - [x] Give some suggestions and recommendations to improve the hotel business.
 
 <br><br>
+
+---
 
 ## 2️⃣ Problem Statement
 
