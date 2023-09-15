@@ -1,7 +1,8 @@
 ![slide1](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis/blob/main/slides/Slide1.PNG)
 
+![slide1](/assets/slides/Slide1.PNG)
+
 # 🏨 Hotel Booking Demand Analysis
-# 🚧 [WORK IN PROGRESS] 🚧
 A personal project instructed by General Academy to showcase my EDA work. <br>
 Click [🔗here](https://public.tableau.com/app/profile/pideb/viz/HotelBookingDemands_16947519881480/STORYBOARD) to access the Tableau Storyboard used in the presentation.
 
