@@ -1,7 +1,5 @@
 ![slide1](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis/blob/main/slides/Slide1.PNG)
 
-![slide1](/assets/slides/Slide1.PNG)
-
 # 🏨 Hotel Booking Demand Analysis
 A personal project instructed by General Academy to showcase my EDA work. <br>
 Click [🔗here](https://public.tableau.com/app/profile/pideb/viz/HotelBookingDemands_16947519881480/STORYBOARD) to access the Tableau Storyboard used in the presentation.
@@ -50,6 +48,8 @@ This mini-project was done to:
 ## 2️⃣ Problem Statement
 
 Both City and Resort Hotels are experiencing downturn in their booking numbers as people would cancel their reservation after a period of time. The manager wanted to know what was the reasoning behind this and how do they overcome this situation. Come out with some recommendations that we can suggest to the hotels manager in order to improve their business.
+
+![slide2](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis/blob/main/slides/Slide2.PNG)
 
 ### Business Questions
 
@@ -152,13 +152,13 @@ The purpose of this analysis is to gain insights into booking trends specific to
 
 According to beaches.com, the main difference between resorts and City Hotels is in the amenities. City Hotels cater to travellers who need a place to spend the night at a certain destination, while Resort Hotels tend to be destinations in themselves. Resorts often have a more spacious layout, offering their guests everything they need in one place[^1].
 
-[slide3]
+![slide3](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis/blob/main/slides/Slide3.PNG)
 
 The first chart shows ratio of bookings in Resort Hotel compared to City Hotel. City Hotel is clearly more popular with customers, with a booking percentage reaching 66% with 79,325 orders. Whereas, Resort Hotels are only booked by 33% of the time, from a total bookings of 119,393 orders.
 
 In regards of the booking cancelation, total number of customer checked-out from both hotels has a whopping amount of 75,164 while customers that declined the bookings represents a total of 44,219 times.
 
-[slide4]
+![slide4](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis/blob/main/slides/Slide4.PNG)
 
 According to data, around 19% of hotel orders made online are canceled before the customer arrives[^2]. These cancellations can cause reduced room availability and impact hotel revenue because every empty room can be a financial burden on that day. Additionally, if a hotel uses an Online Travel Agency (OTA), this cancellation rate can impact the hotel's ranking in searches[^3].
 
@@ -170,7 +170,7 @@ City Hotels have a higher cancellation rate when compared to Resort Hotels. This
 
 From the given dataset, the hotel customers travelled from 177 distinct coutries, with the most of the bookings coming from European country, specifically in Portugal. Not only that, the top 10 of the booking orders comes from countries that have four season weather which means they most probably travelled for vacations. The distribution of countries can be seen in the map below:
 
-[slide5]
+![slide5](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis/blob/main/slides/Slide5.PNG)
 
 The darker the greenish colour indicates that more bookings coming from that country. Protugal having the most orders with 44,584 bookings, followed by United Kingdom with 12,128 bookings and France with 10,415 booking orders. The rest are below than 10,000 orders that shares the same continent as the top countries.
 
@@ -180,11 +180,11 @@ The darker the greenish colour indicates that more bookings coming from that cou
 
 To investigate the factors influencing cancellation rates among customers, we first examined the relationship between the number of hotel bookings and the months of the year. In the graph, the y-axis represents the total bookings, while the x-axis represents the months, with blue lines indicating City Hotels and orange lines indicating Resort Hotels.
 
-[slide6]
+![slide6](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis/blob/main/slides/Slide6.PNG)
 
 Both City and Resort Hotels show a steady increase in bookings as the year progresses, reaching a peak in August. Then it followed by a sharp decline in bookings for the rest of the year. This indicates that the highest number of hotel bookings occurs during the summer season, typically spanning from June to September. During this period, people are more likely to go on summer vacations, leading to increased bookings.
 
-[slide7]
+![slide7](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis/blob/main/slides/Slide7.PNG)
 
 In August, Resort Hotels have a peak average daily room rate of $187, whereas City Hotels charge an average of $115 per night. When comparing the number of bookings canceled due to price surges, August stands out with the highest cancellation rates compared to other months. This observation suggests that an increase in room rates, especially during the peak summer season, may be a key reason for customers canceling their hotel bookings. Understanding these patterns can help hotels better manage pricing strategies and potentially reduce cancellation rates during peak seasons.
 
@@ -194,7 +194,7 @@ In August, Resort Hotels have a peak average daily room rate of $187, whereas Ci
 
 To analyze the impact of the duration of customer stays on booking cancellations, we divided the data into two categories: stays during weeknights (Monday to Friday) and stays during weekend nights (Saturday and Sunday) as shown in the chart below:
 
-[slide8]
+![slide8](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis/blob/main/slides/Slide8.PNG)
 
 **Weeknight Stays:**
 
@@ -213,6 +213,8 @@ These findings highlight the need for improvements in the hotel industry, especi
 ---
 
 ## 5️⃣ Summary and Recommendation
+
+![slide9](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis/blob/main/slides/Slide9.PNG)
 
 In summary, City Hotels are the preferred choice for most customers, and there's a noticeable surge in bookings during holiday seasons, particularly from May to July and October to December. Based on these observations, here are some business recommendations:
 
