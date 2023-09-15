@@ -159,18 +159,24 @@ According to beaches.com, the main difference between resorts and City Hotels is
 
 ![slide3](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis/blob/main/slides/Slide3.PNG)
 
-<details>
-<summary> Click to open SQL queries </summary>
+#### Click to open SQL queries:
 
-#### Total of all bookings:
+<details>
+<summary> Total of all bookings
+</summary>
+
 ```sql
 SELECT
 	'Total Bookings' AS title,
 	COUNT(hotel) AS total_bookings
 FROM hotels_cleaned;
 ```
+</details>
 
-#### Total customer stayed and canceled:
+<details>
+<summary> Total customer stayed and canceled
+</summary>
+
 ```sql
 SELECT
 	'Stayed' AS status,
@@ -184,8 +190,12 @@ SELECT
 FROM hotels_cleaned
 WHERE is_canceled = 'Canceled';
 ```
+</details>
 
-#### Total bookings in City and Resort hotels:
+<details>
+<summary> Total bookings in City and Resort hotels
+</summary>
+
 ```sql
 SELECT
 	'City Hotel' AS hotel_type,
@@ -199,8 +209,12 @@ SELECT
 FROM hotels_cleaned
 WHERE hotel = 'Resort Hotel';
 ```
+</details>
 
-#### Percentage of City and Resort Hotel bookings:
+<details>
+<summary> Percentage of City and Resort Hotel bookings
+</summary>
+
 ```sql
 SELECT
 	'City Hotel' AS hotel_type,
@@ -218,8 +232,8 @@ SELECT
 FROM hotels_cleaned
 WHERE hotel = 'Resort Hotel';
 ```
-
 </details>
+
 
 <br>
 
@@ -229,10 +243,12 @@ In regards of the booking cancelation, total number of customer checked-out from
 
 ![slide4](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis/blob/main/slides/Slide4.PNG)
 
-<details>
-<summary> Click to open SQL queries </summary>
+#### Click to open SQL queries:
 
-#### Percentage of customer stayed and canceled:
+<details>
+<summary> Percentage of customer stayed and canceled
+</summary>
+
 ```sql
 SELECT
 	'Stayed' AS status,
@@ -250,8 +266,12 @@ SELECT
 FROM hotels_cleaned
 WHERE is_canceled = 'Canceled';
 ```
+</details>
 
-#### Percentage of customer stayed and canceled in each hotel types:
+<details>
+<summary> Percentage of customer stayed and canceled in each hotel types
+</summary>
+
 ```sql
 SELECT
 	'City Hotel' AS hotel_type,
@@ -293,8 +313,6 @@ SELECT
 FROM hotels_cleaned
 WHERE is_canceled = 'Canceled' AND hotel = 'Resort Hotel';
 ```
-
-
 </details>
 <br>
 
@@ -310,10 +328,12 @@ From the given dataset, the hotel customers travelled from 177 distinct coutries
 
 ![slide5](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis/blob/main/slides/Slide5.PNG)
 
-<details>
-<summary> Click to open SQL queries </summary>
+#### Click to open SQL queries:
 
-#### Top 10 countries with the most bookings:
+<details>
+<summary> Top 10 countries with the most bookings
+</summary>
+
 ```sql
 SELECT country_name, COUNT(hotel) AS total_bookings
 FROM hotels_cleaned
@@ -321,8 +341,11 @@ GROUP BY country_name
 ORDER BY total_bookings DESC
 LIMIT 10;
 ```
+</details>
 
-#### Bookings based on country regions:
+<details>
+<summary> Bookings based on country regions </summary>
+
 ```sql
 SELECT region, COUNT(hotel) AS total_bookings
 FROM hotels_cleaned
@@ -330,8 +353,6 @@ WHERE region NOT NULL
 GROUP BY region
 ORDER BY total_bookings DESC;
 ```
-
-
 </details>
 <br>
 
@@ -345,10 +366,11 @@ To investigate the factors influencing cancellation rates among customers, exami
 
 ![slide6](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis/blob/main/slides/Slide6.PNG)
 
-<details>
-<summary> Click to open SQL queries </summary>
+#### Click to open SQL queries:
 
-#### Total bookings in each months:
+<details>
+<summary> Total bookings in each months </summary>
+
 ```sql
 SELECT
 	CASE
@@ -370,8 +392,11 @@ FROM hotels_cleaned
 GROUP BY arrival_date_month
 ORDER BY months;
 ```
+</details>
 
-#### Total bookings in each months for each hotel types:
+<details>
+<summary> Total bookings in each months for each hotel types </summary>
+
 ```sql
 WITH
 	AA AS
@@ -412,8 +437,11 @@ FROM AA
 JOIN BB ON AA.arrival_date_month = BB.arrival_date_month
 ORDER BY months;
 ```
+</details>
 
-#### Hotel room prices in each months:
+<details>
+<summary> Hotel room prices in each months </summary>
+
 ```sql
 WITH
 	AA AS
@@ -452,18 +480,20 @@ FROM AA
 JOIN BB ON AA.arrival_date_month = BB.arrival_date_month
 ORDER BY months;
 ```
-
 </details>
+
 <br>
 
 Both City and Resort Hotels show a steady increase in bookings as the year progresses, reaching a peak in August. Then it followed by a sharp decline in bookings for the rest of the year. This indicates that the highest number of hotel bookings occurs during the summer season, typically spanning from June to September. During this period, people are more likely to go on summer vacations, leading to increased bookings.
 
 ![slide7](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis/blob/main/slides/Slide7.PNG)
 
-<details>
-<summary> Click to open SQL queries </summary>
+#### Click to open SQL queries:
 
-#### Correlation between room rates with booking canceled in each months:
+<details>
+<summary> Correlation between room rates with booking canceled in each months
+</summary>
+
 ```sql
 WITH
 	AA AS
@@ -502,7 +532,6 @@ FROM AA
 JOIN BB ON AA.arrival_date_month = BB.arrival_date_month
 ORDER BY months;
 ```
-
 </details>
 <br>
 
@@ -516,10 +545,12 @@ To analyze the impact of the duration of customer stays on booking cancellations
 
 ![slide8](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis/blob/main/slides/Slide8.PNG)
 
+#### Click to open SQL queries:
+
 <details>
-<summary> Click to open SQL queries </summary>
+<summary> Percentage of cancelation over stays duration in week nights
+</summary>
 
-#### Percentage of cancelation over stays duration in week nights
 ```sql
 WITH
 	AA AS
@@ -568,8 +599,12 @@ SELECT AA.week, ch_percent, rh_percent
 FROM AA
 JOIN BB ON AA.week = BB.week;
 ```
+</details>
 
-#### Percentage of cancelation over stays duration in weekend nights:
+<details>
+<summary> Percentage of cancelation over stays duration in weekend nights
+</summary>
+
 ```sql
 WITH
 	AA AS
@@ -618,7 +653,6 @@ SELECT AA.week, ch_percent, rh_percent
 FROM AA
 JOIN BB ON AA.week = BB.week;
 ```
-
 </details>
 <br>
 
