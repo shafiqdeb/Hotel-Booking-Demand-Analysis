@@ -159,11 +159,144 @@ According to beaches.com, the main difference between resorts and City Hotels is
 
 ![slide3](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis/blob/main/slides/Slide3.PNG)
 
+<details>
+<summary> Click to open SQL queries </summary>
+
+#### Total of all bookings:
+```sql
+SELECT
+	'Total Bookings' AS title,
+	COUNT(hotel) AS total_bookings
+FROM hotels_cleaned;
+```
+
+#### Total customer stayed and canceled:
+```sql
+SELECT
+	'Stayed' AS status,
+	COUNT(is_canceled) AS total_status
+FROM hotels_cleaned
+WHERE is_canceled = 'Stayed'
+UNION
+SELECT
+	'Canceled' AS status,
+	COUNT(is_canceled) AS total_status
+FROM hotels_cleaned
+WHERE is_canceled = 'Canceled';
+```
+
+#### Total bookings in City and Resort hotels:
+```sql
+SELECT
+	'City Hotel' AS hotel_type,
+	COUNT(hotel) AS total_bookings
+FROM hotels_cleaned
+WHERE hotel = 'City Hotel'
+UNION
+SELECT
+	'Resort Hotel',
+	COUNT(hotel)
+FROM hotels_cleaned
+WHERE hotel = 'Resort Hotel';
+```
+
+#### Percentage of City and Resort Hotel bookings:
+```sql
+SELECT
+	'City Hotel' AS hotel_type,
+	ROUND(COUNT(hotel) * 100.0
+		/ (SELECT COUNT(hotel)
+		FROM hotels_cleaned),2) AS percent_of_bookings
+FROM hotels_cleaned
+WHERE hotel = 'City Hotel'
+UNION
+SELECT
+	'Resort Hotel',
+	ROUND(COUNT(hotel) * 100.0
+		/ (SELECT COUNT(hotel)
+		FROM hotels_cleaned),2)
+FROM hotels_cleaned
+WHERE hotel = 'Resort Hotel';
+```
+
+</details>
+
+<br>
+
 The pie chart shows ratio of bookings in Resort Hotel compared to City Hotel. City Hotel is clearly more popular with customers, with a booking percentage reaching 66% with 79,325 orders. Whereas, Resort Hotels are only booked by 33% of the time, from a total bookings of 119,393 orders.
 
 In regards of the booking cancelation, total number of customer checked-out from both hotels has a whopping amount of 75,164 while customers that declined the bookings represents a total of 44,219 times.
 
 ![slide4](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis/blob/main/slides/Slide4.PNG)
+
+<details>
+<summary> Click to open SQL queries </summary>
+
+#### Percentage of customer stayed and canceled:
+```sql
+SELECT
+	'Stayed' AS status,
+	ROUND(COUNT(hotel) * 100.0
+		/ (SELECT COUNT(is_canceled)
+		FROM hotels_cleaned),2) AS percent_of_status
+FROM hotels_cleaned
+WHERE is_canceled = 'Stayed'
+UNION
+SELECT
+	'Canceled' AS status,
+	ROUND(COUNT(hotel) * 100.0
+		/ (SELECT COUNT(is_canceled)
+		FROM hotels_cleaned),2) AS percent_of_status
+FROM hotels_cleaned
+WHERE is_canceled = 'Canceled';
+```
+
+#### Percentage of customer stayed and canceled in each hotel types:
+```sql
+SELECT
+	'City Hotel' AS hotel_type,
+	'Stayed' AS status,
+	ROUND(COUNT(hotel) * 100.0
+		/ (SELECT COUNT(hotel)
+			FROM hotels_cleaned
+			WHERE hotel = 'City Hotel'),2) AS percent_of_status
+FROM hotels_cleaned
+WHERE is_canceled = 'Stayed' AND hotel = 'City Hotel'
+UNION
+SELECT
+	'City Hotel' AS hotel_type,
+	'Canceled' AS status,
+	ROUND(COUNT(hotel) * 100.0
+		/ (SELECT COUNT(hotel)
+			FROM hotels_cleaned
+			WHERE hotel = 'City Hotel'),2) AS percent_of_status
+FROM hotels_cleaned
+WHERE is_canceled = 'Canceled' AND hotel = 'City Hotel'
+UNION
+SELECT
+	'Resort Hotel' AS hotel_type,
+	'Stayed' AS status,
+	ROUND(COUNT(hotel) * 100.0
+		/ (SELECT COUNT(hotel)
+			FROM hotels_cleaned
+			WHERE hotel = 'Resort Hotel'),2) AS percent_of_status
+FROM hotels_cleaned
+WHERE is_canceled = 'Stayed' AND hotel = 'Resort Hotel'
+UNION
+SELECT
+	'Resort Hotel' AS hotel_type,
+	'Canceled' AS status,
+	ROUND(COUNT(hotel) * 100.0
+		/ (SELECT COUNT(hotel)
+			FROM hotels_cleaned
+			WHERE hotel = 'Resort Hotel'),2) AS percent_of_status
+FROM hotels_cleaned
+WHERE is_canceled = 'Canceled' AND hotel = 'Resort Hotel';
+```
+
+
+</details>
+<br>
 
 According to data, around 19% of hotel orders made online are canceled before the customer arrives[^2]. These cancellations can cause reduced room availability and impact hotel revenue because every empty room can be a financial burden on that day. Additionally, if a hotel uses an Online Travel Agency (OTA), this cancellation rate can impact the hotel's ranking in searches[^3].
 
@@ -177,6 +310,31 @@ From the given dataset, the hotel customers travelled from 177 distinct coutries
 
 ![slide5](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis/blob/main/slides/Slide5.PNG)
 
+<details>
+<summary> Click to open SQL queries </summary>
+
+#### Top 10 countries with the most bookings:
+```sql
+SELECT country_name, COUNT(hotel) AS total_bookings
+FROM hotels_cleaned
+GROUP BY country_name
+ORDER BY total_bookings DESC
+LIMIT 10;
+```
+
+#### Bookings based on country regions:
+```sql
+SELECT region, COUNT(hotel) AS total_bookings
+FROM hotels_cleaned
+WHERE region NOT NULL
+GROUP BY region
+ORDER BY total_bookings DESC;
+```
+
+
+</details>
+<br>
+
 The darker the greenish colour indicates that more bookings coming from that country. Protugal having the most orders with 44,584 bookings, followed by United Kingdom with 12,128 bookings and France with 10,415 booking orders. The rest are below than 10,000 orders that shares the same continent as the top countries.
 
 <br>
@@ -187,9 +345,166 @@ To investigate the factors influencing cancellation rates among customers, exami
 
 ![slide6](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis/blob/main/slides/Slide6.PNG)
 
+<details>
+<summary> Click to open SQL queries </summary>
+
+#### Total bookings in each months:
+```sql
+SELECT
+	CASE
+		WHEN arrival_date_month = 'January' THEN 1
+		WHEN arrival_date_month = 'February' THEN 2
+		WHEN arrival_date_month = 'March' THEN 3
+		WHEN arrival_date_month = 'April' THEN 4
+		WHEN arrival_date_month = 'May' THEN 5
+		WHEN arrival_date_month = 'June' THEN 6
+		WHEN arrival_date_month = 'July' THEN 7
+		WHEN arrival_date_month = 'August' THEN 8
+		WHEN arrival_date_month = 'September' THEN 9
+		WHEN arrival_date_month = 'October' THEN 10
+		WHEN arrival_date_month = 'November' THEN 11
+		WHEN arrival_date_month = 'December' THEN 12
+	END AS months,
+	COUNT(hotel) AS total_bookings
+FROM hotels_cleaned
+GROUP BY arrival_date_month
+ORDER BY months;
+```
+
+#### Total bookings in each months for each hotel types:
+```sql
+WITH
+	AA AS
+	(
+		SELECT
+		arrival_date_month,
+			COUNT(hotel) AS ch_bookings
+		FROM hotels_cleaned
+		WHERE hotel = 'City Hotel'
+		GROUP BY arrival_date_month
+	),
+	BB AS
+	(
+		SELECT
+			arrival_date_month,
+			COUNT(hotel) AS rh_bookings
+		FROM hotels_cleaned
+		WHERE hotel = 'Resort Hotel'
+		GROUP BY arrival_date_month
+	)
+SELECT
+	CASE
+		WHEN AA.arrival_date_month = 'January' THEN 1
+		WHEN AA.arrival_date_month = 'February' THEN 2
+		WHEN AA.arrival_date_month = 'March' THEN 3
+		WHEN AA.arrival_date_month = 'April' THEN 4
+		WHEN AA.arrival_date_month = 'May' THEN 5
+		WHEN AA.arrival_date_month = 'June' THEN 6
+		WHEN AA.arrival_date_month = 'July' THEN 7
+		WHEN AA.arrival_date_month = 'August' THEN 8
+		WHEN AA.arrival_date_month = 'September' THEN 9
+		WHEN AA.arrival_date_month = 'October' THEN 10
+		WHEN AA.arrival_date_month = 'November' THEN 11
+		WHEN AA.arrival_date_month = 'December' THEN 12
+	END AS months,
+	ch_bookings, rh_bookings
+FROM AA
+JOIN BB ON AA.arrival_date_month = BB.arrival_date_month
+ORDER BY months;
+```
+
+#### Hotel room prices in each months:
+```sql
+WITH
+	AA AS
+	(
+		SELECT arrival_date_month,
+			ROUND(AVG(adr),0) AS ch_adr
+		FROM hotels_cleaned
+		WHERE hotel = 'City Hotel'
+		GROUP BY arrival_date_month
+	),
+	BB AS
+	(
+		SELECT arrival_date_month,
+			ROUND(AVG(adr),0) AS rh_adr
+		FROM hotels_cleaned
+		WHERE hotel = 'Resort Hotel'
+		GROUP BY arrival_date_month
+	)
+SELECT
+	CASE
+		WHEN AA.arrival_date_month = 'January' THEN 1
+		WHEN AA.arrival_date_month = 'February' THEN 2
+		WHEN AA.arrival_date_month = 'March' THEN 3
+		WHEN AA.arrival_date_month = 'April' THEN 4
+		WHEN AA.arrival_date_month = 'May' THEN 5
+		WHEN AA.arrival_date_month = 'June' THEN 6
+		WHEN AA.arrival_date_month = 'July' THEN 7
+		WHEN AA.arrival_date_month = 'August' THEN 8
+		WHEN AA.arrival_date_month = 'September' THEN 9
+		WHEN AA.arrival_date_month = 'October' THEN 10
+		WHEN AA.arrival_date_month = 'November' THEN 11
+		WHEN AA.arrival_date_month = 'December' THEN 12
+	END AS months,
+	ch_adr, rh_adr
+FROM AA
+JOIN BB ON AA.arrival_date_month = BB.arrival_date_month
+ORDER BY months;
+```
+
+</details>
+<br>
+
 Both City and Resort Hotels show a steady increase in bookings as the year progresses, reaching a peak in August. Then it followed by a sharp decline in bookings for the rest of the year. This indicates that the highest number of hotel bookings occurs during the summer season, typically spanning from June to September. During this period, people are more likely to go on summer vacations, leading to increased bookings.
 
 ![slide7](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis/blob/main/slides/Slide7.PNG)
+
+<details>
+<summary> Click to open SQL queries </summary>
+
+#### Correlation between room rates with booking canceled in each months:
+```sql
+WITH
+	AA AS
+	(
+		SELECT arrival_date_month,
+			ROUND(AVG(adr),2) AS avg_adr
+		FROM hotels_cleaned
+		WHERE is_canceled = 'Canceled'
+		GROUP BY arrival_date_month
+	),
+	BB AS
+	(
+		SELECT arrival_date_month,
+			COUNT(is_canceled) AS total_canceled
+		FROM hotels_cleaned
+		WHERE is_canceled = 'Canceled'
+		GROUP BY arrival_date_month
+	)
+SELECT
+	CASE
+		WHEN AA.arrival_date_month = 'January' THEN 1
+		WHEN AA.arrival_date_month = 'February' THEN 2
+		WHEN AA.arrival_date_month = 'March' THEN 3
+		WHEN AA.arrival_date_month = 'April' THEN 4
+		WHEN AA.arrival_date_month = 'May' THEN 5
+		WHEN AA.arrival_date_month = 'June' THEN 6
+		WHEN AA.arrival_date_month = 'July' THEN 7
+		WHEN AA.arrival_date_month = 'August' THEN 8
+		WHEN AA.arrival_date_month = 'September' THEN 9
+		WHEN AA.arrival_date_month = 'October' THEN 10
+		WHEN AA.arrival_date_month = 'November' THEN 11
+		WHEN AA.arrival_date_month = 'December' THEN 12
+	END AS months,
+	avg_adr, total_canceled
+FROM AA
+JOIN BB ON AA.arrival_date_month = BB.arrival_date_month
+ORDER BY months;
+```
+
+</details>
+<br>
 
 In August, Resort Hotels have a peak average daily room rate of $187, whereas City Hotels charge an average of $115 per night. When comparing the number of bookings canceled due to price surges, August stands out with the highest cancellation rates compared to other months. This observation suggests that an increase in room rates, especially during the peak summer season, may be a key reason for customers canceling their hotel bookings. Understanding these patterns can help hotels better manage pricing strategies and potentially reduce cancellation rates during peak seasons.
 
@@ -200,6 +515,112 @@ In August, Resort Hotels have a peak average daily room rate of $187, whereas Ci
 To analyze the impact of the duration of customer stays on booking cancellations, divide the data into two categories: stays during weeknights (Monday to Friday) and stays during weekend nights (Saturday and Sunday) as shown in the column barchart below:
 
 ![slide8](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis/blob/main/slides/Slide8.PNG)
+
+<details>
+<summary> Click to open SQL queries </summary>
+
+#### Percentage of cancelation over stays duration in week nights
+```sql
+WITH
+	AA AS
+	(
+		SELECT
+			stays_in_week_nights AS week,
+			ROUND(COUNT(hotel) * 100.0 /
+			(
+				SELECT SUM(canceled)
+				FROM
+				(
+					SELECT
+						stays_in_week_nights,
+						COUNT(hotel) AS canceled
+					FROM hotels_cleaned
+					WHERE is_canceled = 'Canceled'
+					GROUP BY stays_in_week_nights
+				) AS total_cancel	
+			),2) AS ch_percent
+		FROM hotels_cleaned
+		WHERE hotel = 'City Hotel' AND is_canceled = 'Canceled'
+		GROUP BY week
+	),
+	BB AS
+	(
+		SELECT
+			stays_in_week_nights AS week,
+			ROUND(COUNT(hotel) * 100.0 /
+			(
+				SELECT SUM(canceled)
+				FROM
+				(
+					SELECT
+						stays_in_week_nights,
+						COUNT(hotel) AS canceled
+					FROM hotels_cleaned
+					WHERE is_canceled = 'Canceled'
+					GROUP BY stays_in_week_nights
+				) AS total_cancel	
+			),2) AS rh_percent
+		FROM hotels_cleaned
+		WHERE hotel = 'Resort Hotel' AND is_canceled = 'Canceled'
+		GROUP BY week
+	)
+SELECT AA.week, ch_percent, rh_percent
+FROM AA
+JOIN BB ON AA.week = BB.week;
+```
+
+#### Percentage of cancelation over stays duration in weekend nights:
+```sql
+WITH
+	AA AS
+	(
+		SELECT
+			stays_in_weekend_nights AS week,
+			ROUND(COUNT(hotel) * 100.0 /
+			(
+				SELECT SUM(canceled)
+				FROM
+				(
+					SELECT
+						stays_in_weekend_nights,
+						COUNT(hotel) AS canceled
+					FROM hotels_cleaned
+					WHERE is_canceled = 'Canceled'
+					GROUP BY stays_in_weekend_nights
+				) AS total_cancel	
+			),2) AS ch_percent
+		FROM hotels_cleaned
+		WHERE hotel = 'City Hotel' AND is_canceled = 'Canceled'
+		GROUP BY week
+	),
+	BB AS
+	(
+		SELECT
+			stays_in_weekend_nights AS week,
+			ROUND(COUNT(hotel) * 100.0 /
+			(
+				SELECT SUM(canceled)
+				FROM
+				(
+					SELECT
+						stays_in_weekend_nights,
+						COUNT(hotel) AS canceled
+					FROM hotels_cleaned
+					WHERE is_canceled = 'Canceled'
+					GROUP BY stays_in_weekend_nights
+				) AS total_cancel	
+			),2) AS rh_percent
+		FROM hotels_cleaned
+		WHERE hotel = 'Resort Hotel' AND is_canceled = 'Canceled'
+		GROUP BY week
+	)
+SELECT AA.week, ch_percent, rh_percent
+FROM AA
+JOIN BB ON AA.week = BB.week;
+```
+
+</details>
+<br>
 
 **Weeknight Stays:**
 
