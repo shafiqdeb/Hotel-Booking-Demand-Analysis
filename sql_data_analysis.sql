@@ -6,112 +6,75 @@
 -- slide 3
 -- Total all bookings
 SELECT
-	'Total Bookings' AS title,
 	COUNT(hotel) AS total_bookings
-FROM hotels_cleaned;
+FROM
+	hotels_cleaned;
 
 -- Total bookings in City and Resort hotels
 SELECT
-	'City Hotel' AS hotel_type,
+	hotel,
 	COUNT(hotel) AS total_bookings
-FROM hotels_cleaned
-WHERE hotel = 'City Hotel'
-UNION
-SELECT
-	'Resort Hotel',
-	COUNT(hotel)
-FROM hotels_cleaned
-WHERE hotel = 'Resort Hotel';
+FROM
+	hotels_cleaned hc
+GROUP BY hotel;
 
 -- Percentage of City and Resort hotel bookings
 SELECT
-	'City Hotel' AS hotel_type,
-	ROUND(COUNT(hotel) * 100.0
-		/ (SELECT COUNT(hotel)
+	hotel,
+	ROUND(COUNT(hotel) * 100.0 /
+		(SELECT COUNT(hotel)
 		FROM hotels_cleaned),2) AS percent_of_bookings
-FROM hotels_cleaned
-WHERE hotel = 'City Hotel'
-UNION
-SELECT
-	'Resort Hotel',
-	ROUND(COUNT(hotel) * 100.0
-		/ (SELECT COUNT(hotel)
-		FROM hotels_cleaned),2)
-FROM hotels_cleaned
-WHERE hotel = 'Resort Hotel';
+FROM
+	hotels_cleaned
+GROUP BY hotel;
+
 
 -- Total stayed and cancelled
-SELECT
-	'Stayed' AS status,
+SELECT 
+	is_canceled AS status,
 	COUNT(is_canceled) AS total_status
-FROM hotels_cleaned
-WHERE is_canceled = 'Stayed'
-UNION
-SELECT
-	'Canceled' AS status,
-	COUNT(is_canceled) AS total_status
-FROM hotels_cleaned
-WHERE is_canceled = 'Canceled';
-	
----------------------
+FROM
+	hotels_cleaned
+GROUP BY
+	is_canceled;
+
+---------------------	
 -- slide 4
 -- Percentage of stayed and cancelled
-SELECT
-	'Stayed' AS status,
-	ROUND(COUNT(hotel) * 100.0
-		/ (SELECT COUNT(is_canceled)
-		FROM hotels_cleaned),2) AS percent_of_status
-FROM hotels_cleaned
-WHERE is_canceled = 'Stayed'
-UNION
-SELECT
-	'Canceled' AS status,
-	ROUND(COUNT(hotel) * 100.0
-		/ (SELECT COUNT(is_canceled)
-		FROM hotels_cleaned),2) AS percent_of_status
-FROM hotels_cleaned
-WHERE is_canceled = 'Canceled';
+SELECT 
+	is_canceled,
+	ROUND(COUNT(hotel) * 100.0 /
+		(SELECT COUNT(is_canceled)
+		FROM hotels_cleaned),2) AS percent_of_status	
+FROM
+	hotels_cleaned
+GROUP BY
+	is_canceled;
 
 -- Percentage of stayed and canceled by hotel type
 SELECT
-	'City Hotel' AS hotel_type,
-	'Stayed' AS status,
-	ROUND(COUNT(hotel) * 100.0
-		/ (SELECT COUNT(hotel)
+	hotel,
+	is_canceled AS status,
+	ROUND(COUNT(hotel) * 100.0 /
+		(SELECT COUNT(hotel)
 			FROM hotels_cleaned
-			WHERE hotel = 'City Hotel'),2) AS percent_of_status
+			WHERE hotel = 'City Hotel'
+		),2) AS percentage
 FROM hotels_cleaned
-WHERE is_canceled = 'Stayed' AND hotel = 'City Hotel'
+WHERE hotel = 'City Hotel'
+GROUP BY hotel, status
 UNION
 SELECT
-	'City Hotel' AS hotel_type,
-	'Canceled' AS status,
-	ROUND(COUNT(hotel) * 100.0
-		/ (SELECT COUNT(hotel)
+	hotel,
+	is_canceled AS status,
+	ROUND(COUNT(hotel) * 100.0 /
+		(SELECT COUNT(hotel)
 			FROM hotels_cleaned
-			WHERE hotel = 'City Hotel'),2) AS percent_of_status
+			WHERE hotel = 'Resort Hotel'
+		),2) AS percentage
 FROM hotels_cleaned
-WHERE is_canceled = 'Canceled' AND hotel = 'City Hotel'
-UNION
-SELECT
-	'Resort Hotel' AS hotel_type,
-	'Stayed' AS status,
-	ROUND(COUNT(hotel) * 100.0
-		/ (SELECT COUNT(hotel)
-			FROM hotels_cleaned
-			WHERE hotel = 'Resort Hotel'),2) AS percent_of_status
-FROM hotels_cleaned
-WHERE is_canceled = 'Stayed' AND hotel = 'Resort Hotel'
-UNION
-SELECT
-	'Resort Hotel' AS hotel_type,
-	'Canceled' AS status,
-	ROUND(COUNT(hotel) * 100.0
-		/ (SELECT COUNT(hotel)
-			FROM hotels_cleaned
-			WHERE hotel = 'Resort Hotel'),2) AS percent_of_status
-FROM hotels_cleaned
-WHERE is_canceled = 'Canceled' AND hotel = 'Resort Hotel';
+WHERE hotel = 'Resort Hotel'
+GROUP BY hotel, status;
 
 ---------------------
 -- slide 5
@@ -229,7 +192,8 @@ FROM
 WITH
 	AA AS
 	(
-		SELECT arrival_date_month,
+		SELECT
+			arrival_date_month,
 			ROUND(AVG(adr),0) AS ch_adr
 		FROM hotels_cleaned
 		WHERE hotel = 'City Hotel'
@@ -237,7 +201,8 @@ WITH
 	),
 	BB AS
 	(
-		SELECT arrival_date_month,
+		SELECT
+			arrival_date_month,
 			ROUND(AVG(adr),0) AS rh_adr
 		FROM hotels_cleaned
 		WHERE hotel = 'Resort Hotel'
@@ -269,15 +234,17 @@ ORDER BY months;
 WITH
 	AA AS
 	(
-		SELECT arrival_date_month,
-			ROUND(AVG(adr),2) AS avg_adr
+		SELECT
+			arrival_date_month,
+			ROUND(AVG(adr),2)  AS avg_adr
 		FROM hotels_cleaned
 		WHERE is_canceled = 'Canceled'
 		GROUP BY arrival_date_month
 	),
 	BB AS
 	(
-		SELECT arrival_date_month,
+		SELECT
+			arrival_date_month,
 			COUNT(is_canceled) AS total_canceled
 		FROM hotels_cleaned
 		WHERE is_canceled = 'Canceled'
