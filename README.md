@@ -58,9 +58,10 @@ Both City and Resort Hotels are experiencing downturn in their booking numbers a
 
 ### Business Questions
 
-1. Where do the customers are coming from?
+1. Where do the customers come from?
 2. What would affect the cancellation rate of hotel bookings? and
-3. How do hotel prices and duration of stays have impact on the customer satisfaction?
+3. How do hotel prices and duration of stays have an impact on customer satisfaction?
+
 
 <br><br>
 
@@ -72,7 +73,6 @@ Both City and Resort Hotels are experiencing downturn in their booking numbers a
 For this **EDA** (Exploratory Data Analysis) project, we will be utilizing the "Hotel booking demand" dataset. The original source of this data is the [article](https://www.sciencedirect.com/science/article/pii/S2352340918315191) titled "Hotel Booking Demand Datasets," authored by *Nuno Antonio*, *Ana Almeida*, and *Luis Nunes*, and published in [Data in Brief](https://www.sciencedirect.com/journal/data-in-brief), Volume 22, in February 2019. The dataset was downloaded and subjected to cleaning procedures by *Thomas Mock* and *Antoine Bichat* during the [#TidyTuesday](https://github.com/rfordatascience/tidytuesday/tree/master/data/2020/2020-02-11) initiative in the week of February 11th, 2020.<br>
 
 ![GitHub](https://img.shields.io/github/license/rfordatascience/tidytuesday)
-
 
 The dataset consists of `29` columns and `119390` rows and held three years worth of transactions ranging from October 2014 until September 2017. It includes booking details for both City Hotel and Resort Hotel. The dataset also includes hotel reservation information such as the booking date, length of stay, the number of adults, children, and babies, as well as, the availability of parking spaces, among other attributes.
 
@@ -155,7 +155,7 @@ The purpose of this analysis is to gain insights into booking trends specific to
 
 ### 1. Introduction on City Hotel and Resort Hotel
 
-According to beaches.com, the main difference between resorts and City Hotels is in the amenities. City Hotels cater to travellers who need a place to spend the night at a certain destination, while Resort Hotels tend to be destinations in themselves. Resorts often have a more spacious layout, offering their guests everything they need in one place[^1].
+According to beaches.com, the main difference between resorts and City Hotels is in the amenities. City Hotels cater to travelers who need a place to spend the night at a certain destination, while Resort Hotels tend to be destinations in themselves. Resorts often have a more spacious layout, offering their guests everything they need in one place[^1].
 
 ![slide3](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis/blob/main/slides/Slide3.PNG)
 
@@ -237,9 +237,9 @@ WHERE hotel = 'Resort Hotel';
 
 <br>
 
-The pie chart shows ratio of bookings in Resort Hotel compared to City Hotel. City Hotel is clearly more popular with customers, with a booking percentage reaching 66% with 79,325 orders. Whereas, Resort Hotels are only booked by 33% of the time, from a total bookings of 119,393 orders.
+The pie chart shows the ratio of bookings in Resort Hotel compared to City Hotel. City Hotel is clearly more popular with customers, with a booking percentage reaching 66% with 79,325 orders. Whereas, Resort Hotels are only booked by 33% of the time, from a total bookings of 119,393 orders.
 
-In regards of the booking cancelation, total number of customer checked-out from both hotels has a whopping amount of 75,164 while customers that declined the bookings represents a total of 44,219 times.
+In regards to the booking cancellation, the total number of customers checked-out from both hotels has a whopping amount of 75,164 while customers that declined the bookings represents a total of 44,219 times.
 
 ![slide4](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis/blob/main/slides/Slide4.PNG)
 
@@ -324,7 +324,7 @@ City Hotels have a higher cancellation rate when compared to Resort Hotels. This
 
 ### 2. Insights on countries with the most booking orders
 
-From the given dataset, the hotel customers travelled from 177 distinct coutries, with the most of the bookings coming from European country, specifically in Portugal. Not only that, the top 10 of the booking orders comes from countries that have four season weather which means they most probably travelled for vacations. The distribution of countries can be seen in the map below:
+From the given dataset, the hotel customers traveled from 177 distinct countries, with the most of the bookings coming from European countries, specifically in Portugal. Not only that, the top 10 of the booking orders comes from countries that have four season weather which means they most probably traveled for vacations. The distribution of countries can be seen in the map below:
 
 ![slide5](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis/blob/main/slides/Slide5.PNG)
 
@@ -356,7 +356,7 @@ ORDER BY total_bookings DESC;
 </details>
 <br>
 
-The darker the greenish colour indicates that more bookings coming from that country. Protugal having the most orders with 44,584 bookings, followed by United Kingdom with 12,128 bookings and France with 10,415 booking orders. The rest are below than 10,000 orders that shares the same continent as the top countries.
+The darker the greenish color indicates that more bookings are coming from that country. Portugal had the most orders with 44,584 bookings, followed by the United Kingdom with 12,128 bookings and France with 10,415 booking orders. The rest are below 10,000 orders that share the same continent as the top countries.
 
 <br>
 
@@ -541,7 +541,7 @@ In August, Resort Hotels have a peak average daily room rate of $187, whereas Ci
 
 ### 4. Correlation on week of stay against the cancellation rate
 
-To analyze the impact of the duration of customer stays on booking cancellations, divide the data into two categories: stays during weeknights (Monday to Friday) and stays during weekend nights (Saturday and Sunday) as shown in the column barchart below:
+To analyze the impact of the duration of customer stays on booking cancellations, divide the data into two categories: stays during weeknights (Monday to Friday) and stays during weekend nights (Saturday and Sunday) as shown in the column bar chart below:
 
 ![slide8](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis/blob/main/slides/Slide8.PNG)
 
@@ -661,12 +661,13 @@ JOIN BB ON AA.week = BB.week;
 - For stays less than a week (short stays), there's a significant cancellation rate, with City Hotels having a cancellation rate of more than 25%. However, this rate decreases dramatically in the following weeks. This suggests that many customers initially book for short stays but then cancel their reservations, possibly because they found alternative accommodations or changed their plans.
 - In contrast, Resort Hotels show a relatively steady increase in cancellations as the duration of stay extends throughout the week. This could indicate that guests may become dissatisfied with the hotel's services or amenities during longer stays, leading to cancellations.
 
+
 **Weekend Stays:**
 
 - In the case of weekend stays, there's a notable surge in cancellations for stays of less than a week for City Hotels, accounting for nearly 40% of the total cancellations. However, this cancellation rate decreases linearly with longer stays. This suggests that customers booking City Hotels for weekend getaways may be more likely to cancel if they initially plan for shorter trips.
 - For Resort Hotels, there isn't a clear linear pattern in the cancellation rates based on the duration of the stay. However, most of the cancellation rates for Resort Hotels are below 15%, which is relatively low compared to City Hotels.
+- These findings highlight the need for improvements in the hotel industry, especially for City Hotels, where higher cancellation rates are observed compared to Resort Hotels. These improvements may encompass service quality, pricing strategies, and other factors that influence customer satisfaction and booking cancellations. Understanding these patterns can help hotels take proactive measures to reduce cancellations and enhance the overall guest experience.
 
-These findings highlight the need for improvements in the hotel industry, especially for City Hotels, where higher cancellation rates are observed compared to Resort Hotels. These improvements may encompass service quality, pricing strategies, and other factors that influence customer satisfaction and booking cancellations. Understanding these patterns can help hotels take proactive measures to reduce cancellations and enhance the overall guest experience.
 
 <br><br>
 
@@ -686,7 +687,7 @@ In summary, City Hotels are the preferred choice for most customers, and there's
 
 <br>
 
-The cancellation rate increases as the length of stay in both types of hotels incereases. City Hotels' cancellation rate increased significantly with the lowest percentage for a duration of less than one week. Resort hotels also tend to experience an increase in cancellation rates, but they are more stagnant and for stays of less than 2 weeks and more than 1 month the cancellation rate tends to be lower. Based on the insights about cancellation rates and the length of stay at both types of hotels, here are some business recommendations:
+The cancellation rate increases as the length of stay in both types of hotels increases. City Hotels' cancellation rate increased significantly with the lowest percentage for a duration of less than one week. Resort hotels also tend to experience an increase in cancellation rates, but they are more stagnant and for stays of less than 2 weeks and more than 1 month the cancellation rate tends to be lower. Based on the insights about cancellation rates and the length of stay at both types of hotels, here are some business recommendations:
 
 1. **Establish Clear Cancellation Policies**: It is essential for companies to have well-defined cancellation policies in place to protect against revenue loss. These policies should be communicated clearly to customers both during online and offline booking processes. They should encompass details about refunds, cancellation fees, and other terms and conditions. Implementing stricter cancellation policies can help deter fraudulent bookings and minimize revenue impact.
 
