@@ -52,7 +52,7 @@ This mini-project was done to:
 
 ## 2️⃣ Problem Statement
 
-Both City and Resort Hotels are experiencing downturn in their booking numbers as people would cancel their reservation after a period of time. The manager wanted to know what was the reasoning behind this and how do they overcome this situation. Come out with some recommendations that we can suggest to the hotels manager in order to improve their business.
+Both City and Resort Hotels are experiencing downturn in their booking numbers as people would cancel their reservation after a period of time. The manager wanted to know what was the reasoning behind this and how do they overcome this situation. Come out with some recommendations that can be suggested to the hotels manager in order to improve their business.
 
 ![slide2](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis/blob/main/slides/Slide2.PNG)
 
@@ -69,7 +69,7 @@ Both City and Resort Hotels are experiencing downturn in their booking numbers a
 ## 3️⃣ Data Preparation and Cleaning
 
 ### Data Extraction
-For this **EDA** (Exploratory Data Analysis) project, I will be utilizing the "Hotel booking demand" dataset. The original source of this data is the [article](https://www.sciencedirect.com/science/article/pii/S2352340918315191) titled "Hotel Booking Demand Datasets," authored by *Nuno Antonio*, *Ana Almeida*, and *Luis Nunes*, and published in [Data in Brief](https://www.sciencedirect.com/journal/data-in-brief), Volume 22, in February 2019. The dataset was downloaded and subjected to cleaning procedures by *Thomas Mock* and *Antoine Bichat* during the [#TidyTuesday](https://github.com/rfordatascience/tidytuesday/tree/master/data/2020/2020-02-11) initiative in the week of February 11th, 2020.<br>
+For this **EDA** (Exploratory Data Analysis) project, we will be utilizing the "Hotel booking demand" dataset. The original source of this data is the [article](https://www.sciencedirect.com/science/article/pii/S2352340918315191) titled "Hotel Booking Demand Datasets," authored by *Nuno Antonio*, *Ana Almeida*, and *Luis Nunes*, and published in [Data in Brief](https://www.sciencedirect.com/journal/data-in-brief), Volume 22, in February 2019. The dataset was downloaded and subjected to cleaning procedures by *Thomas Mock* and *Antoine Bichat* during the [#TidyTuesday](https://github.com/rfordatascience/tidytuesday/tree/master/data/2020/2020-02-11) initiative in the week of February 11th, 2020.<br>
 
 ![GitHub](https://img.shields.io/github/license/rfordatascience/tidytuesday)
 
@@ -159,7 +159,7 @@ According to beaches.com, the main difference between resorts and City Hotels is
 
 ![slide3](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis/blob/main/slides/Slide3.PNG)
 
-The first chart shows ratio of bookings in Resort Hotel compared to City Hotel. City Hotel is clearly more popular with customers, with a booking percentage reaching 66% with 79,325 orders. Whereas, Resort Hotels are only booked by 33% of the time, from a total bookings of 119,393 orders.
+The pie chart shows ratio of bookings in Resort Hotel compared to City Hotel. City Hotel is clearly more popular with customers, with a booking percentage reaching 66% with 79,325 orders. Whereas, Resort Hotels are only booked by 33% of the time, from a total bookings of 119,393 orders.
 
 In regards of the booking cancelation, total number of customer checked-out from both hotels has a whopping amount of 75,164 while customers that declined the bookings represents a total of 44,219 times.
 
@@ -183,7 +183,7 @@ The darker the greenish colour indicates that more bookings coming from that cou
 
 ### 3. Comparison on total bookings and room rate per months
 
-To investigate the factors influencing cancellation rates among customers, we first examined the relationship between the number of hotel bookings and the months of the year. In the graph, the y-axis represents the total bookings, while the x-axis represents the months, with blue lines indicating City Hotels and orange lines indicating Resort Hotels.
+To investigate the factors influencing cancellation rates among customers, examine the relationship between the number of hotel bookings and the months of the year. In the line charts below, the y-axis represents the total bookings, while the x-axis represents the months, with blue lines indicating City Hotels and orange lines indicating Resort Hotels.
 
 ![slide6](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis/blob/main/slides/Slide6.PNG)
 
@@ -197,7 +197,7 @@ In August, Resort Hotels have a peak average daily room rate of $187, whereas Ci
 
 ### 4. Correlation on week of stay against the cancellation rate
 
-To analyze the impact of the duration of customer stays on booking cancellations, we divided the data into two categories: stays during weeknights (Monday to Friday) and stays during weekend nights (Saturday and Sunday) as shown in the chart below:
+To analyze the impact of the duration of customer stays on booking cancellations, divide the data into two categories: stays during weeknights (Monday to Friday) and stays during weekend nights (Saturday and Sunday) as shown in the column barchart below:
 
 ![slide8](https://github.com/shafiqdeb/Hotel-Booking-Demand-Analysis/blob/main/slides/Slide8.PNG)
 
@@ -241,7 +241,6 @@ The cancellation rate increases as the length of stay in both types of hotels in
 
 <br>
 By implementing these recommendations, both City and Resort Hotels can effectively manage lead times and reduce cancellation rates, ultimately improving revenue and guest satisfaction.
-
 
 <br><br>
 
