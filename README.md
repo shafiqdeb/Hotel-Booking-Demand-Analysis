@@ -169,13 +169,10 @@ According to beaches.com, the main difference between resorts and City Hotels is
 SELECT COUNT(hotel) AS total_bookings
 FROM hotels_cleaned;
 ```
-<sub><sup>
 
 | total_bookings |
 | -------------: |
 |        119,383 |
-
-</sub></sup>
 
 <br>
 </details>
