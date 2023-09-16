@@ -169,10 +169,13 @@ According to beaches.com, the main difference between resorts and City Hotels is
 SELECT COUNT(hotel) AS total_bookings
 FROM hotels_cleaned;
 ```
+<sub><sup>
 
 | total_bookings |
 | -------------: |
 |        119,383 |
+
+</sub></sup>
 
 <br>
 </details>
@@ -190,8 +193,8 @@ GROUP BY is_canceled;
 ```
 
 | status         | total_status   |
-| -------------- | -------------: |
-| Cenceled       |         44,219 |
+| :------------- | -------------: |
+| Canceled       |         44,219 |
 | Stayed	     |         75,164 |
 
 <br>
@@ -209,7 +212,7 @@ FROM hotels_cleaned
 GROUP BY hotel;
 ```
 | hotel          | total_bookings |
-| -------------- | -------------: |
+| :------------- | -------------: |
 | City Hotel     |         79,325 |
 | Resort Hotel   |         40,058 |
 
@@ -231,7 +234,7 @@ GROUP BY hotel;
 ```
 
 | hotel          | percent_of_bookings |
-| -------------- | ------------------: |
+| :------------- | ------------------: |
 | City Hotel     |        		 66.45 |
 | Resort Hotel   |        		 33.55 |
 
@@ -264,7 +267,7 @@ GROUP BY is_canceled;
 ```
 
 | status         | percent_of_status   |
-| -------------- | ------------------: |
+| :------------- | ------------------: |
 | Canceled       |        		 37.04 |
 | Stayed         |        		 62.96 |
 
@@ -302,7 +305,7 @@ GROUP BY hotel, status;
 ```
 
 | hotel 	   | status		| percentage |
-| ---		   | ---		| ---:		 |
+| :--		   | :--		| ---:		 |
 | City Hotel   | Canceled	| 41.72		 |
 | City Hotel   | Stayed		| 58.28		 |
 | Resort Hotel | Canceled	| 27.76		 |
@@ -338,7 +341,7 @@ LIMIT 10;
 ```
 
 | country_name		| total_bookings
-| ---				| ---:
+| :--				| ---:
 | Portugal			| 48,584
 | United Kingdom	| 12,128
 | France			| 10,415
@@ -365,7 +368,7 @@ ORDER BY total_bookings DESC;
 ```
 
 | region			| total_bookings
-| ---				| ---:
+| :--				| ---:
 | Europe			| 108,148
 | Asia & Pacific	| 3,681
 | South America		| 2,885
